@@ -1,20 +1,23 @@
-Aurum Forever Druid - source credits
+Aurums Night Elf Druid Guide — credits
 
-The Teldrassil, Westfall, Duskwood and druid class quest portions adapt
-Polestar guide sources by The Polestar authors (including Fitz), copyright
-2026, distributed under GNU General Public License version 3.
+Thanks to Fitz and The Polestar authors for the original guide material,
+authoring tools and addon. The Teldrassil, Westfall, Duskwood and Druid
+class-quest sections adapt their guide sources, copyright 2026, under
+GNU General Public License version 3.
 
 Source repository: https://github.com/fitzforge/polestar
-Pinned source: 1775eb81e56fc1e127ae869ccec0b7dc8d7092fd
+Source revision: 1775eb81e56fc1e127ae869ccec0b7dc8d7092fd
 https://github.com/fitzforge/polestar/tree/1775eb81e56fc1e127ae869ccec0b7dc8d7092fd
 
-Changes by Aurum's project: separate aurum-druid guide IDs, Night Elf Druid
-filtering, split southern questing chapters, integrated dungeon/class trips,
-early dungeon pickups, level checks and an ending at City of Dalaran.
-This is an independent adaptation, not an official Polestar release.
-Original guide paths and adaptation notes are retained in guide comments
-and in the research source maps. Corresponding .guide sources are included
-with the friend bundle. LICENSE contains the GPL-3.0 licence terms.
+Adaptations and additions by AurumTitanos: separate aurum-druid guide IDs,
+Night Elf Druid filtering, split southern questing chapters, integrated
+dungeon/class trips, early dungeon pickups, level checks and an ending
+at City of Dalaran.
 
-Quest facts and coordinates use the local Forever reference build described
-in the project instructions. Compiler-generated data notices are preserved.
+This is an independent community adaptation, not an official Polestar
+release. Original attribution comments and license notices are preserved.
+The corresponding .guide files and complete build source are available
+in this repository. LICENSE contains the GPL version 3 terms.
+
+Quest facts and coordinates use the Forever reference data included
+with the build source. Compiler-generated data notices are preserved.
