@@ -1,0 +1,180 @@
+guide aurum-druid/westfall-return
+title 14 - Westfall after the Hall of Thanes
+faction Alliance
+race NightElf
+class Druid
+levels 13-16
+zone Westfall
+category Leveling
+folder Aurum - Druid and dungeons
+version 11
+next aurum-druid/druid-class-quests
+
+# Adapted from Fitz / fitzforge Polestar, GPL-3.0-only.
+# Source: guides/forever/alliance/02-westfall.guide at 1775eb81e56fc1e127ae869ccec0b7dc8d7092fd.
+# Aurum adaptation: Night Elf Druid, southern questing, dungeon interleaving.
+
+step Stormwind training after the Hall
+  zone Stormwind City
+  tip After the Hall rewards, return to Stormwind and train your new Druid spells. Use your Stormwind hearth if ready; otherwise follow the travel route.
+  train class
+
+step Jansen Stead on the way into Westfall
+  zone Westfall
+  tip Follow the western road from Goldshire into Westfall. Collect the Furlbrows' quests while passing their burned farm. Pick up Sacks of Oats along the northern loop; the well sample waits until Alba gives you her vials at Sentinel Hill.
+  accept 36
+  accept 151
+  accept 184 optional -- Only if a Westfall Deed dropped in Elwynn; right-click it.
+  turnin 184 optional
+
+step Saldean's Farm on the southern road
+  tip Stop at the farm on the road to Sentinel Hill. Deliver the Furlbrows' request now and take Westfall Stew before killing any stew ingredients. Salma is in the house. Leave the harvester quests alone on this early visit: their higher-level enemies and parts farming are not required for this route.
+  turnin 36
+  accept 38
+  accept 22
+
+step Gryan Stoutmantle: report and militia quest
+  tip Continue south to Sentinel Hill. Meet Gryan Stoutmantle at the stone tower entrance. Deliver Marshal Dughan's report and accept The People's Militia before leaving Gryan.
+  turnin 109
+  accept 12
+
+step Captain Danuvin: Patrolling Westfall
+  tip Captain Danuvin stands beside Gryan at the tower entrance. Accept Patrolling Westfall; the guide will take you to its gnolls during the northern quest circuit.
+  accept 102
+
+step Thor: learn the Sentinel Hill flight path
+  tip Walk south from the tower to Thor at the gryphon roost. Speak to him to learn the flight path; do not take a flight.
+  getfp "Sentinel Hill" npc 523
+
+step Scout Galiaan: Red Leather Bandanas
+  tip Scout Galiaan is west of the gryphon roost, near the inn. Accept Red Leather Bandanas for the Defias you will fight near Jangolode Mine.
+  accept 153
+
+step Innkeeper Heather: set your hearthstone
+  tip Enter the inn west of the gryphon roost and speak to Innkeeper Heather. Choose Make this inn your home to bind your Hearthstone to Sentinel Hill. The arrow points to Heather.
+  sethome "Sentinel Hill" npc 8931
+
+step Sentinel Hill inn: Gnomish Tome
+  collect 208860 "Rumi of Gnomeregan: The Collected Works" @52.7,53.8 map 1436 era -- Click the Gnomish Tome behind the innkeeper. Keep the book for Garion Wendell in Stormwind. If unavailable, skip this pickup.
+
+step Alba Fairmoon: wells and murlocs
+  tip Alba Fairmoon stands just north of the inn. Accept Testing the Wells and Murloc Gills. The State of the Mines unlocks only after the well samples are handed in; it is not available on this first visit. Keep the well-sampling vials she gives you. With these quests collected, follow the guide northwest to Molsen Farm.
+  accept 92742
+  accept 92744
+
+step Molsen Farm: sample the well
+  tip Use Alba's Well Water Sample Kit at the well. The Jansen well is a separate stop after the coast and gnolls; if you sample it early, the guide will remember it.
+  use 254545 quest 92742.2 @46.1,38.2
+
+step Jangolode Mine
+  tip Kill Defias Trappers and Smugglers outside the mine. Avoid the guarded pocket-watch farmhouse. Keep any bandanas that drop.
+  kill 504 quest 12
+  kill 95 quest 12
+
+step The north coast
+  tip Use ordinary Murloc Raiders, levels 11-12, along the north coast. Avoid the higher-level Netters and other coastal packs. Raiders flee at low health: pull away from neighbouring spawns.
+  collect 254548 npc 515 quest 92744          -- Longshore Murloc Gills from the lower-level Raiders.
+  collect 730 npc 515 quest 38.2              -- Murloc Eye from the same Raiders.
+
+step The gnoll hills
+  tip Hunt Riverpaw Gnolls, levels 11-12. Avoid Herbalists and tightly packed camps.
+  collect 725 npc 117 quest 102               -- Gnoll Paws
+
+step Jansen Stead: Okra from rusty golems
+  tip Collect missing Okra from Rusty Harvest Golems, levels 9-10, around Jansen Stead. Avoid Harvest Watchers and Reapers.
+  collect 732 npc 480 quest 38.4
+
+step Jansen Stead: sample the well
+  tip Use the Well Water Sample Kit at the well beside the house. This fills the Jansen Stead sample; it is separate from the Molsen sample.
+  use 254545 quest 92742.1 @56.6,18.6
+
+step Jansen Stead: oats and rewards
+  tip Finish any oats still needed from nearby sacks and return them to Verna. Do not enter the guarded farmhouse for the pocket watch on this circuit.
+  collect 1528 quest 151
+  turnin 151                                  -- Verna Furlbrow
+
+step Finish the stew and liver ingredients
+  tip On the road south, use Young Goretusks, levels 12-13, for missing liver and snouts; avoid the level 14-15 adult Goretusks. Items gathered earlier already count.
+  collect 723 npc 454 quest 22
+  collect 731 npc 454 quest 38.3
+  collect 729 npc 199 quest 38.1
+
+step Saldean's Farm
+  tip Hand in the stew and liver quests. If The Killing Fields is already complete, collect that reward from Farmer Saldean too.
+  turnin 22                                   -- Salma Saldean
+  turnin 38
+
+step Sentinel Hill
+  turnin 12
+  accept 13
+  turnin 102                                  -- Captain Danuvin
+  turnin 92742                                -- Alba Fairmoon
+  turnin 92744
+  accept 92745                                -- Unlocked by the well hand-in; the mine and quarry follow this visit.
+  vendor 8931 -- Sell, repair and refill affordable drinks before the mine and western farms.
+  buy 1179 x20 npc 8931 optional
+
+step Jangolode Mine: the unlocked mine quest
+  tip With the Hall and northern quest rewards collected, return to Jangolode for Alba's mine quest. Take it now if you left it behind at the well hand-in. This is the interior-mine visit; the earlier militia work stayed outside.
+  accept 92745
+  kill 1236 quest 92745.1                     -- Kobold Diggers inside Jangolode Mine.
+
+step The Gold Coast Quarry
+  tip Continue southwest from the mine to the quarry, then follow the coast road toward the western farms. Complete the Riverpaw Miners for the same mine quest.
+  kill 1426 quest 92745.2
+
+step The western farms
+  tip Defias Pillagers and Looters hold the farms west of Sentinel Hill, between the coast road and Moonbrook.
+  kill 589 quest 13
+  kill 590 quest 13
+  collect 829 quest 153
+
+step Sentinel Hill
+  turnin 13                                   -- Gryan Stoutmantle
+  accept 14
+  turnin 153                                  -- Scout Galiaan
+  turnin 92745                                -- Alba: both mine objectives are now complete.
+  accept 92747                                -- Moonbrook Espionage, saved for the later Moonbrook visit.
+
+step Stormwind: return after Westfall
+  zone Stormwind City
+  fly "Stormwind"
+
+# The private runtime shows the following errands only below level 16, or
+# while their quest is already accepted. Finish accepted errands before training.
+step Below 16: Reading Room
+  tip Still below 16? Ask Roy Lewells for Reading Room. This city errand gives 680 XP.
+  accept 97234
+
+step Reading Room: the Stormwind Keep library
+  turnin 97234
+
+step Below 16: Shelf Picked
+  tip If still below 16, take Shelf Picked from Donyal. Its reward is 1,000 XP.
+  accept 97237
+
+step Shelf Picked: find the four books
+  complete 97237 @75.05,30.12 map 1453 live -- Find the four quest books inside the Stormwind Keep library. The arrow points to Donyal; search the shelves nearby.
+
+step Shelf Picked: return to Roy
+  turnin 97237
+
+step Stormwind training after Westfall
+  tip Train your available Druid spells, then repair and restock drinks.
+  train class
+  vendor 1298 -- Frederick Stover: repair during this Trade District visit, then restock drinks at the inn.
+  vendor 6740 -- At the Trade District inn, sell low-value loot and refill affordable level-15 Melon Juice; reserve money for class spells, travel and profession ranks.
+  buy 1205 x20 npc 6740 optional
+
+step Profession ranks and library books in Stormwind
+  tip Maris Granger and Simon Tanner are together in Old Town. If Skinning or Leatherworking is near its current cap, buy the next available rank; do not grind profession skill just to leave this stop. Keep a Skinning Knife in your bags.
+  talk 1292 -- Check Skinning ranks: Journeyman starts at skill 50; Expert at 125, subject to the trainer's character-level requirement.
+  talk 5564 -- Check Leatherworking ranks and buy only recipes you plan to use.
+  buy 4471 x1 nearest                        -- Keep one reusable Flint and Tinder.
+  buy 4470 x5 nearest                        -- Replenish enough wood for five more campfires; existing stock counts.
+  note At Cooking 20, keep five Basic Campfire Kits ready; at Leatherworking 20, keep five Camp Tents. Craft during town stops and group waits using gathered leather. The early Teldrassil steps teach the recipes; later restocks should use nearby trainers, not return across continents.
+  talk 211033 optional -- If carrying library books, visit Garion Wendell inside the Mage Tower during this city stop and hand in every offered book quest. This extra visit is optional if it would exceed your short-detour budget.
+
+step Earthroot for the class detour
+  tip Bring five Earthroot for Cure Poison before leaving Stormwind. Maria Lumere at Alchemy Supplies sells a limited stock; buy from the Auction House or use gathered herbs if she is sold out. This goal checks five in your bags, so herbs you already own count without another purchase. The next Aurum chapter learns Cure Poison and Aquatic Form together before Lordaeron.
+  buy 2449 x5 npc 1313

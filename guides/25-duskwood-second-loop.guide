@@ -1,0 +1,105 @@
+guide aurum-druid/duskwood-second-loop
+title 24 - Duskwood: the hermit and the stars
+faction Alliance
+race NightElf
+class Druid
+levels 24-26
+zone Duskwood
+category Leveling
+folder Aurum - Druid and dungeons
+version 4
+next aurum-druid/wetlands-outdoors
+
+# Adapted from fitzforge/polestar guides/forever/alliance/05-duskwood.guide
+# and the Look to the Stars portion of 07-thousand-needles.guide at
+# 1775eb81e56fc1e127ae869ccec0b7dc8d7092fd, GPL-3.0-only.
+# The precursor quests were accepted in this pack's first Duskwood loop.
+
+step Return to Darkshire
+  tip Keep both Dalaran quests and Songblade Search in your log. Fly back to Darkshire from Lakeshire. The two Wetlands dungeon pickups wait until the level-26 trip, before entering Excavation Site; no extra Menethil round trip is needed.
+  fly "Darkshire"
+  sethome "Darkshire" npc 6790
+  turnin 93 optional -- Hand in any saved legs before selling. If not yet complete, finish during the existing cemetery spider work.
+  accept 240 lvl 17 optional
+  turnin 174
+  accept 175 lvl 20
+
+step Darkshire: finish the Stalvan investigation
+  tip Smitts, Commander Ebonlocke and Clerk Daltry are all in town. Follow their hand-offs in order. Keep the final combat quest for the higher-level Duskwood chapter after Excavation Site; Stalvan is level 32 and is too strong to rush at 24.
+  turnin 78
+  accept 79 lvl 22
+  turnin 79
+  accept 80 lvl 22
+  turnin 80
+  accept 97 lvl 22
+  turnin 97
+  accept 98 lvl 22
+
+step Blind Mary
+  turnin 175
+  accept 177 lvl 20
+
+step The Insane Ghoul
+  tip The Insane Ghoul is inside the small crypt at Tranquil Gardens Cemetery. Clear carefully and collect Mary's Looking Glass.
+  collect 1946 quest 177
+
+step Viktori Prism'Antras
+  turnin 177
+  accept 181 lvl 20                           -- Keep this for the later Vul'Gol Ogre Mound visit after Excavation Site; no extra trip now.
+  vendor 228 -- Avette Fellwood: sell low-value loot and repair before restocking drinks at the inn.
+  vendor 6790 -- Sell and repair nearby; refill Melon Juice at 24 or Sweet Nectar from 25. Reserve travel and training money.
+  buy 1708 x20 npc 6790 optional
+
+step Abercrombie
+  tip Follow the road west, then go to the hermit's shack north-east of Raven Hill Cemetery.
+  turnin 157
+  accept 158 lvl 20
+
+step Sven's Camp
+  turnin 230
+  accept 262 lvl 20
+  turnin 226
+
+step Back to Darkshire
+  tip Follow the road east to Darkshire. Madame Eva, Clerk Daltry and Tavernkeep Smitts pass you along the same investigation; the quest pickups must be done in this order.
+  turnin 262
+  accept 265 lvl 20
+  turnin 265
+  accept 266 lvl 20
+  turnin 266
+  accept 453 lvl 20
+  turnin 158
+  accept 156 lvl 20
+
+step Rot Blossoms
+  tip Skeletal Horrors on the hillside between Darkshire and Tranquil Gardens Cemetery drop the Rot Blossoms.
+  collect 1598 quest 156
+
+step Tavernkeep Smitts
+  turnin 156
+  accept 159 lvl 20
+  vendor nearest
+
+step Abercrombie
+  tip Return west to the hermit's shack.
+  turnin 159
+  accept 133 lvl 20
+
+step Ghoul Ribs
+  tip Ghouls in the northern half of Raven Hill Cemetery drop the ribs. Avoid Mor'Ladim.
+  collect 884 quest 133
+
+step Abercrombie
+  turnin 133
+
+step Jitters
+  tip Jitters hides in the house at Raven Hill's west end.
+  turnin 240 optional
+  turnin 453
+  accept 268 lvl 20
+
+step Sven's Camp
+  turnin 268
+
+step Continue to the Wetlands outdoor circuit
+  note The next chapter fills the leveling gap with explicit harbor, raptor and coastal quests before Excavation Site. Keep the dungeon pickups in your log.

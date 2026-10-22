@@ -1,0 +1,110 @@
+guide aurum-druid/duskwood-finale
+title 26 - Duskwood: worgen, ogres and the road to 30
+faction Alliance
+race NightElf
+class Druid
+levels 26-30
+zone Duskwood
+category Leveling
+folder Aurum - Druid and dungeons
+next aurum-druid/southshore-outdoors
+version 5
+
+# Adapted from the Duskwood portion of fitzforge/polestar
+# guides/forever/alliance/07-thousand-needles.guide at
+# 1775eb81e56fc1e127ae869ccec0b7dc8d7092fd, GPL-3.0-only.
+# The Missing Diplomat detour and default-pack handoffs are omitted.
+# Stalvan's evidence is batched with chapters 21/24/25; this chapter finishes it.
+
+step Return to Darkshire
+  tip After Excavation Site, return to Darkshire. These quest pickups have lower minimum levels than their combat: later worgen and Plague Spreaders reach about 30-31. Stay with your partner, pull carefully, and postpone a fight for another Excavation Site run if it is too difficult.
+  fly "Darkshire"
+  sethome "Darkshire" npc 6790
+  accept 58 lvl 18
+  accept 173 lvl 23
+
+step Nightbane Shadow Weavers
+  tip The worgen hold Brightwood, west of Darkshire and north of the road.
+  kill 533 quest 173
+
+step Calor
+  turnin 173
+  accept 221 lvl 23
+
+step Nightbane Dark Runners
+  tip Dark Runners prowl the woods south of the road, west of Darkshire.
+  kill 205 quest 221
+
+step Calor
+  turnin 221
+  accept 222 lvl 23
+
+step Nightbane Vile Fangs and Tainted Ones
+  tip These stronger worgen are south of Darkshire, west and south of Tranquil Gardens Cemetery. Use your group if solo pulls are unsafe.
+  kill 206 quest 222
+  kill 920 quest 222
+
+step Darkshire
+  turnin 222
+  accept 223 lvl 23
+  turnin 223
+  vendor 228 -- Avette Fellwood: sell low-value loot and repair before restocking drinks at the inn.
+  vendor 6790 -- Sell and repair nearby. Keep 10-20 affordable Sweet Nectar for shifting and heals.
+  buy 1708 x20 npc 6790 optional
+
+step Abercrombie
+  tip Follow the road west to the hermit's shack north-east of Raven Hill Cemetery.
+  accept 134 lvl 20
+
+step Plague Spreaders
+  tip Plague Spreaders walk the cemetery's northern half. Avoid the roaming elite Mor'Ladim.
+  kill 604 quest 58
+
+step Sven's Camp
+  accept 323 lvl 20
+
+step Raven Hill Cemetery, west
+  tip Skeletal Raiders, Healers and Warders hold the western part of the cemetery, just east of Sven's camp.
+  kill 1110 quest 323
+  kill 787 quest 323
+  kill 785 quest 323
+
+step Raven Hill: Crimes Against Anatomy
+  collect 209849 "Crimes Against Anatomy" @16.7,28.5 map 1431 era -- The book is at the end of the western crypt. Pick it up only if the passage is already safe; otherwise skip this pickup and return to Sven.
+
+step Sven's Camp
+  turnin 323
+  accept 269 lvl 20
+
+step Vul'Gol Ogre Mound
+  tip Collect Abercrombie's Crate near the camp entrance, then finish Look to the Stars in the cave. Zzarc' Vul is level 30: bring your partner and clear carefully. If the fight is too difficult, keep the quest for after another dungeon run. If a Lost Watcher dropped Merrick's Bow, finish its optional ogre kills here too; do not farm for that random drop.
+  collect 1349 quest 134 @33.4,76.3
+  collect 1968 npc 300 x1 quest 181.1 group 2 -- Zzarc' Vul drops the Ogre's Monocle; combine this with the existing ogre-camp visit.
+  accept 96138 item 281142 lvl 18 optional
+  kill 212 x8 quest 96138.1 optional
+  kill 892 x4 quest 96138.2 optional
+
+step Abercrombie
+  turnin 134
+  accept 160 lvl 20
+
+step Back to Darkshire
+  hearth "Darkshire"
+  turnin 58
+  turnin 160
+  accept 251 lvl 20
+  turnin 251
+  accept 401 lvl 20
+  turnin 401
+  accept 252 lvl 20
+  turnin 252
+  turnin 96138 optional
+  turnin 181                                 -- Viktori Prism'Antras: the monocle collected at Vul'Gol.
+
+step Stalvan at Mistmantle Manor
+  tip Stalvan is level 32 in the house northeast of Darkshire. This finish is optional before 30: do it with your leveling partner using controlled pulls. If solo or the fight is unsafe, retain the quest for a later visit instead of fighting a level-32 named enemy underlevelled. This completes the evidence gathered during earlier travel.
+  collect 3629 npc 315 quest 98.1 group 2 optional
+  turnin 98 optional
+
+step Continue through Stormwind toward Southshore
+  note Our next chapter hands in the held city quests, finishes the Stockades investigation, then adds outdoor Southshore XP on the way to Dalaran. No uncounted dungeon repeats are required by this handoff.

@@ -1,0 +1,76 @@
+guide aurum-druid/future-pickups
+title 24 - Stormwind and Redridge: quests and dungeon pickups
+faction Alliance
+race NightElf
+class Druid
+levels 24-30
+zone Stormwind City
+category Dungeons
+folder Aurum - Druid and dungeons
+version 6
+next aurum-druid/duskwood-second-loop
+
+step Stormwind: hold these for Dalaran
+  tip Take these now while in Stormwind, but keep them for the later City of Dalaran run. The level-30 Southshore breadcrumb is separate and should wait. Keep three quest log slots free for this chapter; the two Dalaran quests stay in the log until that run. The two Wetlands pickups are batched with the level-26 dungeon approach so this chapter does not send you north and straight back again.
+  level 24
+
+step Stormwind future pickups
+  fly "Stormwind" -- Fly from Darkshire after the Stockades reward return, rather than walking between cities.
+  accept 92456 group 5
+  accept 92489 group 5
+  vendor 1298 -- Frederick Stover: repair during this Trade District visit, then restock drinks at the inn.
+  vendor 6740 -- Sell, repair nearby and refill your current drink tier before the Redridge trip; Sweet Nectar becomes usable at 25.
+  buy 1205 x20 npc 6740 optional
+
+step Clara's supplies while leaving the city
+  zone Elwynn Forest
+  tip Collect Tyrion's two quest apples from Clara Charles at the orchard west of Stormwind's gate while already passing into Elwynn. Keep these and three Silk Cloth for the level-30 Stormwind return. Do not go back to Tyrion now; the final fight waits until 30.
+  buy 8683 x2 npc 5917 -- These are Clara's Fresh Apples for quest 2746, not ordinary food apples.
+
+step Tower of Azora: research journal
+  zone Elwynn Forest
+  collect 203755 "Archmage Theocritus' Research Journal" @65.46,70.07 map 1429 era -- Pick up the book upstairs while passing the tower. Keep it for the library. Skip this pickup if reaching it would take a long detour.
+
+step Eastvale evidence
+  zone Elwynn Forest
+  tip Continue east to Marshal Haggard at Eastvale. Inspect his upstairs chest and return its page before going to Lakeshire.
+  turnin 74
+  accept 75 lvl 22
+  collect 921 quest 75.1
+  turnin 75
+  accept 78 lvl 22
+
+step Redridge: Excavation Site pickup
+  zone Redridge Mountains
+  tip Speak with Dorin Songblade while passing Lakeshire. Songblade Search is a dungeon errand, so leave it in the log until your Excavation Site group.
+  getfp "Lakeshire" npc 931
+  accept 95772 group 5
+
+step Redridge: level-appropriate outdoor bounties
+  zone Redridge Mountains
+  tip Take Solomon's Law now, at level 24 or above. This later camp is deliberately separated from the earlier level-20 lake and mill loop. Collect Martie's boar task now too; Bellygrub is level 24, so the early visit deliberately left him alone.
+  accept 91 lvl 17
+  accept 34 lvl 18
+
+step Lakeshire west garden
+  zone Redridge Mountains
+  tip Bellygrub wanders near the garden west of town. Clear the ordinary boars around him, start at full health and pull him alone. Deliver his tusk to Martie before continuing to the gnoll hills.
+  collect 3631 quest 34
+  turnin 34
+
+step Yowler on the northern hills
+  zone Redridge Mountains
+  tip Complete the named-gnoll follow-up held from the earlier visit. Yowler is level 25; clear the nearby gnolls and pull him alone instead of charging his camp.
+  collect 3614 npc 518 quest 126.1
+  turnin 126
+
+step Galardell pendants
+  zone Redridge Mountains
+  tip Follow the north shore east into Galardell. Prefer ordinary Shadowhide Gnolls on the western edge; avoid Fangore and the caster groups deeper in the valley. Stop when the pendant count is complete.
+  collect 1075 npc 433 quest 91.1 @66.85,43.86 live
+
+step Lakeshire hand-ins before Duskwood
+  zone Redridge Mountains
+  tip Return to Lakeshire and hand the pendant bounty in before leaving for Duskwood. Keep Songblade Search for the dungeon.
+  turnin 91
+  vendor nearest

@@ -1,0 +1,10 @@
+{
+  "id": "aurum-druid",
+  "title": "Aurums Night Elf Druid Guide",
+  "folder": "PolestarPack_AurumForeverDruid",
+  "author": "Aurum",
+  "version": "0.4.37",
+  "license": "GPL-3.0-only",
+  "source": "Aurum adaptation of GPL-3.0 Polestar guides (1775eb8), with original Forever dungeon chapters. All route chapters are included in this pack. See THIRD-PARTY-CREDITS.txt.",
+  "notes": "WoW Forever Night Elf Druid 1-30 guide pack for Polestar. Suggested Skinning and Leatherworking steps, with dungeon routes. Everything past level 20 is untested and best effort."
+}

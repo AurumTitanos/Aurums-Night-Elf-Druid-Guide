@@ -1,0 +1,72 @@
+guide aurum-druid/wetlands-prerequisites
+title 20 - Cat Form and the Menethil stop
+faction Alliance
+race NightElf
+class Druid
+levels 20-24
+zone Wetlands
+category Dungeons
+folder Aurum - Druid and dungeons
+version 6
+next aurum-druid/redridge-outdoors
+
+step Cat Form begins in Darnassus
+  zone Darnassus
+  tip Cat Form comes from a Forever class quest at 20. Speak with Mathrengyl Bearwalker, then cast Teleport: Moonglade for Dendrite. Already completed this chain? Its quests should check off.
+  level 20
+
+step Teleport and fly to your trainer
+  zone Moonglade
+  tip Cast Teleport: Moonglade, ask Silva Fil'naveth for her free Druid flight to Rut'theran Village, and take the portal up to Darnassus. Silva's flight needs no unlock.
+  teleport 18960
+  fly "Rut'theran Village" npc 11800
+
+step Mathrengyl in Darnassus
+  zone Darnassus
+  accept 98393 -- Mathrengyl is on the middle level of the tree; climb the ramp.
+
+step Dendrite and the Great Cat Spirit
+  zone Moonglade
+  teleport 18960
+  turnin 98393 -- Dendrite is upstairs in the Nighthaven building.
+  accept 98394
+  turnin 98394
+  accept 98396
+
+step Recover the three relics
+  tip Follow the quest into the Stormrage Barrow Den and recover each relic. Read the quest's help and nearby interaction text before entering; use the protection it offers rather than fighting through the dens.
+  complete 98396
+  turnin 98396
+  accept 98731
+  turnin 98731
+  accept 98397
+
+step Return for Cat Form
+  zone Darnassus
+  tip Ask Silva Fil'naveth for her free flight to Rut'theran Village, then take the portal to Mathrengyl to receive Cat Form. Afterward, travel to Menethil Harbor for the Wetlands preparation.
+  fly "Rut'theran Village" npc 11800
+  turnin 98397
+
+step Auberdine boat to Menethil
+  zone Darkshore
+  tip Leave Darnassus through the Rut'theran portal and fly to Auberdine. Take the Menethil boat from the southern branch of the long pier. Disembark at Menethil for a short crocolisk task, then fly south. The harder Greenwarden combat waits for our later level-25 visit.
+  fly "Auberdine"
+  goto 32.34,44.13 "Auberdine: boat to Menethil" era r 30
+
+step Menethil: crocolisk skins while passing
+  zone Wetlands
+  tip Learn the flight path and finish the nearby young-crocolisk skins while changing from boat to flight. Do not cross the marsh for higher-level Fen Creepers now: the later Wetlands outdoor chapter completes that dungeon prerequisite at an appropriate level.
+  getfp "Menethil Harbor" npc 1571
+  vendor 1450 -- Brahnmar: repair equipment; the innkeeper next supplies your drinks.
+  vendor 1464 -- Sell and refill affordable level-15 drinks at the harbor inn before leaving town.
+  buy 1205 x20 npc 1464 optional
+  accept 484 lvl 18 -- James Halloran in Menethil. This prerequisite unlocks Highland Hides for the later Excavation Site trip.
+  collect 3397 npc 1417 x4 quest 484.1 @13.35,54.72 era -- Kill Young Wetlands Crocolisks just outside Menethil on the way east; avoid higher-level crocolisks.
+
+step Menethil before returning south
+  tip Return to the harbor after the young-crocolisk task. Deliver the young crocolisk skins now, so the level-24 dungeon follow-up will be available on the later visit. Fly to Stormwind for the next southern chapter using the flights learned on the dungeon route.
+  turnin 484
+  vendor 1450 -- Brahnmar: repair equipment; the innkeeper next supplies your drinks.
+  vendor 1464 -- Sell, repair nearby, and keep enough drinks for the southern journey.
+  fly "Stormwind"
+

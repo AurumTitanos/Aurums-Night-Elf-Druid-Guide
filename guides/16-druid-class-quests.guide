@@ -1,0 +1,119 @@
+guide aurum-druid/druid-class-quests
+title 16 - Cure Poison and Aquatic Form
+faction Alliance
+race NightElf
+class Druid
+levels 16-18
+zone Stormwind City
+category Class
+folder Aurum - Druid and dungeons
+version 5
+next aurum-druid/ruins-of-lordaeron
+reward spell 8946 "Cure Poison"
+reward spell 1066 "Aquatic Form"
+reward item 15866 16608 263411
+why Learn both Druid utility spells with their class-quest rewards before the next dungeon.
+
+# Adapted from Fitz / fitzforge Polestar, GPL-3.0-only.
+# Sources: guides/forever/class/druid/cure-poison.guide and aquatic-form.guide
+# at 1775eb81e56fc1e127ae869ccec0b7dc8d7092fd.
+# Aurum adaptation: combine the Night Elf chains at level 16 and return to
+# our dungeon route. Darkshore is visited only for these class quests.
+
+step Class-quest supplies and level
+  tip Bring five Earthroot from your bags, the Auction House, or Maria Lumere's limited stock in Stormwind. This supply check completes if you already own five; it does not require buying them again. Keep your hearthstone at Sentinel Hill for the Westfall pendant later. Cure Poison unlocks at 14 and Aquatic Form at 16; this route batches both at 16.
+  level 16
+  buy 2449 x5 npc 1313
+
+step Reach your Darnassus trainer
+  zone Moonglade
+  tip Cast Teleport: Moonglade, then ask Silva Fil'naveth for her free Druid flight to Rut'theran Village and use the portal up to Darnassus. Silva's flight needs no unlock.
+  teleport 18960
+  fly "Rut'theran Village" npc 11800
+
+step Take both class chains
+  zone Darnassus
+  tip Mathrengyl Bearwalker is on the middle level of the Cenarion Enclave tree; climb the interior ramp. Take both quests before teleporting back to Moonglade.
+  accept 6121 npc 4217 lvl 14
+  accept 26 lvl 16
+
+step Dendrite's two lessons
+  zone Moonglade
+  tip Cast Teleport: Moonglade and speak to Dendrite Starblaze upstairs in the Nighthaven building; use the interior ramp.
+  teleport 18960
+  turnin 6121
+  accept 6122
+  turnin 26
+  accept 29
+
+step Trial of the Lake
+  tip Take a Shrine Bauble from a container on the floor of Lake Elune'ara, below Nighthaven. Use it at the Shrine of Remulos on the north-west shore and speak to Tajarri before the bauble expires.
+  collect 15877 x1
+  use 15877 @36.0,41.4
+  complete 29
+  turnin 29
+  accept 272
+
+step Fly to Auberdine
+  zone Darkshore
+  tip Ask Silva Fil'naveth for her free flight to Rut'theran Village, then take Vesprystus's regular flight to Auberdine. Both northern objectives can be gathered before returning to town.
+  fly "Rut'theran Village" npc 11800
+  fly "Auberdine"
+  vendor 6737 -- Sell and refill affordable Melon Juice before the north-coast class objectives. Keep both pendant halves and five Earthroot.
+  buy 1205 x20 npc 6737 optional
+
+step Cliffspring Falls sample
+  tip Follow the northern road toward Cliffspring Falls. Fill the Empty Cliffspring Falls Sampler at the cave mouth by the falls.
+  collect 15845 quest 6122.1
+
+step Northern aquatic pendant
+  tip The Strange Lockbox lies underwater off the north coast, west of the Ruins of Mathystra. Watch your breath and keep the pendant half in your bags.
+  collect 15883 x1
+
+step Return to Alanndarian
+  tip Alanndarian Nightsong waits in Auberdine. Hand over the sample and take Gathering the Cure.
+  turnin 6122
+  accept 6123
+
+step Prepare the cure
+  tip Gather Lunar Fungus from the Lunar Fungal Blooms in the moonkin caves east of Auberdine. Use the five Earthroot you brought from Stormwind; herbalists can gather replacements in Darkshore if needed.
+  collect 15851 x12 quest 6123.2
+  collect 2449 x5 quest 6123.1
+
+step Collect the animal salve
+  turnin 6123
+  accept 6124
+
+step Cure the Sickly Deer
+  tip Use the Curative Animal Salve on Sickly Deer rather than attacking them. They roam Darkshore between Cliffspring River and the southern border. The objective counter tracks successful cures.
+  use 15826 quest 6124.1 @41.5,46.08 -- Target living Sickly Deer in the woods near Auberdine and use the salve; cure ten deer. Do not attack them.
+
+step Westfall pendant
+  zone Westfall
+  tip Hearth to Sentinel Hill. If the hearthstone is unavailable, take the Auberdine boat to Stormwind and fly to Sentinel Hill. Ride north-west to the coast: the Strange Lockbox lies on the sea floor offshore. Keep both pendant halves.
+  hearth "Sentinel Hill"
+  collect 15882 x1
+
+step Finish both lessons in Moonglade
+  zone Moonglade
+  tip Cast Teleport: Moonglade. Combine the two pendant halves into the Pendant of the Sea Lion near the Shrine of Remulos on the north-west shore, then speak to Dendrite upstairs in the Nighthaven building. Hand in both completed lessons and take both trainer returns.
+  teleport 18960
+  collect 15885 quest 272.1
+  turnin 272
+  accept 5061
+  turnin 6124
+  accept 6125
+
+step Return to Mathrengyl
+  tip Ask Silva Fil'naveth for her free flight to Rut'theran Village and use the portal up to Darnassus.
+  fly "Rut'theran Village" npc 11800
+
+step Learn Cure Poison and Aquatic Form
+  zone Darnassus
+  turnin 6125
+  turnin 5061 reward 16608 263411
+
+step Back toward the next dungeon
+  zone Darkshore
+  tip Return through Rut'theran and fly to Auberdine. The next chapter takes the boat toward Menethil and Southshore for Ruins of Lordaeron; do not return to Stormwind first. Keep your hearth bound at Sentinel Hill for the dungeon return. This remains a class-and-dungeon visit, not general Darkshore questing.
+  fly "Auberdine"

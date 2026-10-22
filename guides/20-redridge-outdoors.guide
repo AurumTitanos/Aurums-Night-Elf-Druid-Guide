@@ -1,0 +1,49 @@
+guide aurum-druid/redridge-outdoors
+title 20 - Redridge: lake, gnolls and mill
+faction Alliance
+race NightElf
+class Druid
+levels 20-23
+zone Redridge Mountains
+category Leveling
+folder Aurum - Druid and dungeons
+version 2
+next aurum-druid/duskwood-first-loop
+
+# Original Aurum wording and ordering for the existing southern route.
+# Quest identities/objectives checked in current Forever reference data.
+# Factual route comparison: Polestar 04-redridge-mountains (GPL-3.0-only),
+# installed RXP Forever Alliance-11-20, and the private purchased reference.
+# No elite Keep clear or mandatory Keeshan escort; avoid release escort queues.
+
+step Lakeshire errands
+  zone Redridge Mountains
+  accept 126 lvl 15
+  note Keep Howling in the Hills for our level-24 visit; do not fight Yowler now.
+  tip Cross the bridge into town. Take Verner's follow-up after the earlier gnoll kills, Marris's outdoor tasks near the bridge, and Baren's fish work at the docks. Keep at least two free quest slots for follow-ups.
+  accept 20 lvl 18
+  accept 98387 lvl 18
+  accept 150 lvl 20
+  accept 127 lvl 16
+  vendor nearest
+  note Check your remaining drinks and repair now. Do not buy a new stack if the previous town visit left enough usable drinks.
+
+step Southern lake shore
+  tip Work along the murloc shore east of the bridge for both fish and fins. Pull murlocs away from their neighbours and stop once both objectives are complete.
+  collect 1467 quest 127.1
+  collect 1468 quest 150.1
+
+step Blackrock supplies on the southern hills
+  tip Continue east along the southern side of the lake to the outdoor Blackrock camp. Take weapons from racks and supply containers from the ground while clearing ordinary orcs for axes. Outrunners can net you: keep a clear retreat path and stay out of Stonewatch's elite keep.
+  collect 280841 quest 98387.1 @68.91,79.00 live
+  collect 280839 quest 98387.2 @68.91,79.00 live
+  collect 3014 npc 440 quest 20.1 @68.91,79.00 live
+
+step Cash in the Redridge loop
+  tip Return west along the lake road to Lakeshire and deliver every completed task before leaving. If an objective remains unfinished, finish its marked outdoor area now; do not carry these local quests into the next zone.
+  turnin 150
+  turnin 127
+  turnin 98387
+  turnin 20
+  vendor nearest
+  note The next chapter resumes Duskwood. Shadow Magic, the elite keep bosses, and the escort are not needed for that handoff.

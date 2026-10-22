@@ -1,0 +1,146 @@
+guide aurum-druid/deadmines
+title 18 - Deadmines: Defias route and optional explosives chain
+faction Alliance
+race NightElf
+class Druid
+levels 18-24
+zone Westfall
+category Dungeons
+folder Aurum - Druid and dungeons
+version 5
+next aurum-druid/wetlands-prerequisites
+
+step Begin at Sentinel Hill
+  tip Our Moonbrook chapter leads here after the early Defias and Alba prerequisites. Completed quests should check off; accepted dungeon quests stay in your quest log. Continue the remaining prerequisites before entering with your group. This route stays in the Aurum pack.
+  level 18
+
+step Sentinel Hill pickups
+  accept 92742
+  accept 92744
+  accept 92745
+
+step Alba's Westfall work
+  complete 92742
+  complete 92744
+  complete 92745
+  turnin 92742
+  turnin 92744
+  turnin 92745
+  accept 92747
+
+step Moonbrook supplies
+  complete 92747
+  turnin 92747
+  accept 92748 optional
+
+step Sentinel Hill: send the report to Stormwind
+  zone Westfall
+  fly "Sentinel Hill"
+  turnin 132
+  accept 135
+
+step Stormwind: dungeon pickups and engineers
+  zone Stormwind City
+  tip Fly to Stormwind. Wilder Thistlenettle is in the Dwarven District inn; Shoni and Sprite are in the same district. Collect these quests now so the party does not need to leave the mines later.
+  fly "Stormwind"
+  accept 167 lvl 15
+  accept 168 lvl 14
+  accept 2040 lvl 15
+  turnin 92748 optional
+  accept 92749 optional
+
+step Optional: obtain dynamite for Alba
+  tip Optional: continue this chain only if you already have 10 Rough Dynamite or can obtain it cheaply without a detour. Otherwise continue to Old Town for the Defias report. Check the item required by your quest log before buying anything.
+  complete 92749 optional
+  turnin 92749 optional
+  accept 92750 optional
+
+step Old Town
+  turnin 135
+  accept 141
+  turnin 92750 optional
+  accept 92751 optional
+
+step Optional: back to Sprite
+  turnin 92751 optional
+  accept 92752 optional
+
+step Sentinel Hill and the messenger
+  tip The Defias Messenger patrols the roads between Moonbrook, the Gold Coast Quarry and Jangolode Mine. Follow those roads and look for him; the arrow marks a search starting point, not his live position. Kill him, loot A Mysterious Message, then return to Gryan Stoutmantle at Sentinel Hill.
+  zone Westfall
+  fly "Sentinel Hill"
+  turnin 141
+  accept 142
+  turnin 92752 optional
+  accept 92753 group 5 optional
+  collect 1381 npc 550 x1 quest 142.1 -- Kill the Defias Messenger and loot A Mysterious Message.
+  turnin 142
+
+step Escort the Defias Traitor
+  tip Keep the escort alive until the quest completes, then return to Sentinel Hill for the actual VanCleef quest and Red Silk Bandanas.
+  accept 155
+  complete 155
+  turnin 155
+  accept 166 lvl 14 group 5
+  accept 214 lvl 14 group 5
+
+step Enter the Deadmines with your party
+  tip Repair at Sentinel Hill and refill roughly 10-20 level-appropriate drinks within your budget, then follow the road south-west to Moonbrook with the group. Enter the mine through the large building at the hideout marker and descend its tunnels. Before the instance portal, take the undead side tunnels for Wilder's two quests. Return to the main mine passage afterward and enter the instance together.
+  vendor nearest
+  goto 42.5,71.7 "Deadmines hideout" live r 25
+
+step Clear the mine and the dungeon
+  tip Finish the undead side-area objectives, loot the machinery and bandanas, and kill VanCleef. If you chose Alba's optional explosives chain, use her Extra-Destructive Explosives at the forge as your quest log directs. Loot VanCleef's letter and right-click it to start the Stockade follow-up.
+  complete 167 group 5
+  complete 168 group 5
+  complete 2040 group 5
+  complete 214 group 5
+  complete 166 group 5
+  note Only if you accepted the optional explosives quest: place the Extra-Destructive Explosives at the forge when it directs you. The event has no numbered counter in the reference data; confirm its completion before leaving.
+  accept 373 item 2874 lvl 16 -- Loot VanCleef's Unsent Letter and right-click it. This starts the later Stockades and Seal of Wrynn chain.
+
+step Optional: Alba at the exit
+  tip Meet Alba outside the exit and finish the detonator follow-up. Check the quest log for its event before turning it in.
+  turnin 92753 optional
+  accept 92819 optional
+  turnin 92819 optional -- First use the detonator and wait for its event, then speak to Alba when the hand-in becomes available.
+
+step Lighthouse after leaving Deadmines
+  tip From the Deadmines coastal exit, follow the shore west to the Westfall Lighthouse. Captain Graysons three outdoor tasks provide explicit XP before Cat Form. Five Flasks of Oil are needed for his supply quest. Any already in your bags count; collect only the shortfall from ordinary Harvest Watchers now, at this later level. The early level-12 circuit does not require harvester farming.
+  accept 103 lvl 10
+  accept 152 lvl 10
+  accept 104 lvl 15
+
+step The Westfall coast
+  tip Work north along the shore for all four murloc varieties. Old Murk-Eye patrols the southern coast; he is level 20, so fight him here after the dungeon rather than during the early Westfall visit. Clear nearby murlocs and pull him alone.
+  kill 126 quest 152.1
+  kill 171 quest 152.2
+  kill 127 quest 152.3
+  kill 517 quest 152.4
+  collect 3636 npc 391 quest 104.1
+  collect 814 npc 114 x5 quest 103.1 -- Saved oil counts from your bags; only farm the shortfall if needed.
+
+step Lighthouse rewards before leaving Westfall
+  tip Return to Captain Grayson and finish all three quests, then use the roads to Sentinel Hill for the dungeon rewards. This chapter does not ask you to repeat the dungeon merely to reach 20.
+  turnin 103
+  turnin 152
+  turnin 104
+
+step Sentinel Hill rewards
+  tip Follow the coast and roads back from the mine exit to Sentinel Hill. Turn in the VanCleef and bandana quests before flying to Stormwind.
+  turnin 166
+  turnin 214
+
+step Stormwind rewards and Stockade breadcrumb
+  zone Stormwind City
+  fly "Stormwind"
+  turnin 167
+  turnin 168
+  turnin 2040
+  turnin 373
+  accept 389
+  turnin 389 -- Warden Thelwater is outside the Stockades; the actual prison run is planned at 22.
+
+step Next: Cat Form and the Menethil stop
+  tip The outdoor lighthouse circuit and dungeon hand-ins should bring this pass close to 20. If actual party XP or drop luck leaves a small gap, finish level-appropriate Defias on the Westfall return until the bar reaches 20; do not assume a fixed dungeon-repeat count. Then continue to Cat Form. The harder Greenwarden combat is scheduled in our later Wetlands chapter.
+  level 20

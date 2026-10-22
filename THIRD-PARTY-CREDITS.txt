@@ -1,0 +1,20 @@
+Aurum Forever Druid - source credits
+
+The Teldrassil, Westfall, Duskwood and druid class quest portions adapt
+Polestar guide sources by The Polestar authors (including Fitz), copyright
+2026, distributed under GNU General Public License version 3.
+
+Source repository: https://github.com/fitzforge/polestar
+Pinned source: 1775eb81e56fc1e127ae869ccec0b7dc8d7092fd
+https://github.com/fitzforge/polestar/tree/1775eb81e56fc1e127ae869ccec0b7dc8d7092fd
+
+Changes by Aurum's project: separate aurum-druid guide IDs, Night Elf Druid
+filtering, split southern questing chapters, integrated dungeon/class trips,
+early dungeon pickups, level checks and an ending at City of Dalaran.
+This is an independent adaptation, not an official Polestar release.
+Original guide paths and adaptation notes are retained in guide comments
+and in the research source maps. Corresponding .guide sources are included
+with the friend bundle. LICENSE contains the GPL-3.0 licence terms.
+
+Quest facts and coordinates use the local Forever reference build described
+in the project instructions. Compiler-generated data notices are preserved.

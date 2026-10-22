@@ -1,0 +1,99 @@
+guide aurum-druid/excavation-site
+title 26 - Excavation Site: full quest and reward circuit
+faction Alliance
+race NightElf
+class Druid
+levels 26-30
+zone Wetlands
+category Dungeons
+folder Aurum - Druid and dungeons
+version 6
+next aurum-druid/duskwood-finale
+
+step Menethil: collect both town quests
+  tip Reach 26 before this group trip, begin in Menethil after the outdoor circuit. Take Caitlin's missing-person quest in her house and Highland Hides from James Halloran, whose Young Crocolisk Skins we completed earlier. Songblade Search should be in the log from Lakeshire. Leave three extra slots for inside follow-ups.
+  level 26
+  getfp "Menethil Harbor" npc 1571
+  accept 95647 lvl 24 group 5
+  accept 98815 lvl 24 group 5
+  vendor nearest
+  note Repair and refill roughly 10-20 level-appropriate drinks before leaving town. Keep the skinning knife and space for loot. Save quest items, planned crafting leather and cloth.
+
+step Howins crimson crate
+  turnin 98240 -- Deliver the prepared crate before continuing to the Greenwarden.
+
+step Greenwarden: the prerequisite payoff
+  tip Follow the road east from Menethil to the Green Belt and speak to Rethiel. Blisters on the Land from our earlier visit unlocks this pickup. Complete that earlier chain if unfinished; sharing does not bypass prerequisites.
+  accept 95646 lvl 24 group 5
+
+step Gather your Excavation Site group
+  tip Head south toward Dun Algaz and find the mountain path beside Thelgen Rock's spider cave. The meeting stone is near the foot of this path. This is separate from Prospector Whelgar's outdoor camp. Bring a party ready for the level-31 final boss; pickup level 24 does not mean an easy clear.
+  goto 53.4,65.3 "Thelgen Rock: dungeon mountain path" live r 40
+
+step Climb to the Excavation Site portal
+  tip Follow the winding mountain path uphill from the meeting stone to the portal. Stay on the path; a straight line from the marsh climbs into the mountain.
+  goto 47.8,56.3 "Excavation Site: hilltop instance portal" live r 25
+
+step Raptors and Daewyn's body
+  tip Loot four Thicket Raptor Hides while clearing the raptor section. Beyond Shadetooth, search the Dragonmaw camp tents for Daewyn Songblade's body. Interact with it and take Fallen in the Fen before moving on.
+  complete 98815 group 5
+  turnin 95772 npc 262465 -- Body in a Dragonmaw camp tent after Shadetooth, inside the dungeon.
+  accept 95795 npc 262465 lvl 24 -- Take the news back to Dorin in Lakeshire after the run.
+
+step Highland Horror and Ardin
+  tip Kill the Highland Horror and loot its rootcore. Near the final Site of the Guardian arena, climb the wooden structure to Ardin Grassman. Hand in the search and accept Heartwoven; this return quest gives the Satchel of Potions.
+  complete 95646 group 5
+  turnin 95647 npc 262681 -- Ardin is on the wooden structure beside the Site of the Guardian.
+  accept 95809 npc 262681 lvl 24 -- Keep the Reed-woven Heart for Caitlin.
+
+step Relic Guardian: keep the Titan Relic
+  tip Finish the final boss and loot its Titan Relic. Right-click it to start Lost Relic Carry. Keep the relic and follow-up items through the Wetlands and Ironforge hand-ins.
+  accept 95810 item 270865 lvl 24
+  complete 95810 group 5
+
+step Greenwarden's reward
+  tip Leave by the dungeon entrance and descend the same mountain path. Head north through the marsh to Rethiel before returning west.
+  turnin 95646
+
+step Sarltooth on the post-dungeon return
+  tip Sarltooth is level 29, on the southern rise by the dig. Clear a retreat path, heal to full and pull him alone. This follow-up was held through the dungeon rather than fought at level 26. He is a regular named mob, not the elite Carnage. If a pull is unsafe, wait for a clear opening instead of charging the camp.
+  collect 3638 npc 1353 quest 296.1
+  turnin 296
+
+step Prospector Whelgar: the outdoor excavation camp
+  tip Follow the road west to the outdoor Whelgar's Excavation Site. From its northern entrance, climb the east-side path, cross the wooden bridge and enter the small cave to reach the prospector. This is a different stop from the dungeon entrance.
+  turnin 95810
+  accept 98824 lvl 24 -- Whelgar supplies the follow-up Titan Relic; keep it for Magellas.
+
+step Check Whelgar returned the relic
+  tip Before leaving the cave, open your bags and quest log. Prehistoric Prism should show its supplied Titan Relic and be ready to deliver. The October 8 fix returns the relic for this follow-up; another boss kill is not required. If your live log still shows 0/1, speak to Whelgar again and check for a full bag or failed pickup. If it remains missing, retain the quest and record the beta issue rather than abandoning it or farming another relic.
+  complete 98824 @38.81,52.39 map 1437 era -- Bag and quest-log check at Whelgar: confirm the supplied relic before the Ironforge reward trip.
+
+step Whelgar's dig: Goaz Scrolls
+  collect 209848 x1 @33.6,47.9 map 1437 era -- Check the broken pottery beside the west-side bridge on the way to Menethil. Keep the scrolls for the library. Skip this pickup if the short detour is unsafe.
+
+step Menethil: hides and Heartwoven rewards
+  tip Follow the road west, finish both town quests, repair and clear bag space before the city reward trip.
+  turnin 98815
+  turnin 95809
+  vendor nearest
+
+step Ironforge: finish the relic chain
+  zone Ironforge
+  tip Fly to Ironforge and go to High Explorer Magellas in the Hall of Explorers. This is a dungeon reward visit, not general Dun Morogh leveling. Compare the mace and healer staff rewards with your planned druid gear.
+  fly "Ironforge"
+  turnin 98824
+
+step Ironforge library: Antonidas' autobiography
+  collect 203754 x1 @75.97,10.56 map 1455 era -- Pick up the book by the southern library stairs before leaving the Hall of Explorers. Keep it for Garion Wendell. If unavailable, skip this pickup.
+
+step Lakeshire: give Dorin the news
+  zone Redridge Mountains
+  tip Fly to Lakeshire and speak to Dorin Songblade. Finish Fallen in the Fen before returning to Duskwood.
+  fly "Lakeshire"
+  turnin 95795
+
+step Return to the southern route
+  zone Duskwood
+  fly "Darkshire"
+

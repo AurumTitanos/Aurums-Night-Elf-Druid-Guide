@@ -1,0 +1,106 @@
+guide aurum-druid/southshore-outdoors
+title 29 - Stormwind rewards and Southshore coast
+faction Alliance
+race NightElf
+class Druid
+levels 28-30
+zone Stormwind City
+category Leveling
+folder Aurum - Druid and dungeons
+version 2
+next aurum-druid/dalaran-finale
+
+# Original Aurum wording. Current normalized quest/NPC data supplies IDs,
+# levels, prerequisites and locations. Southshore lies on the already-planned
+# Dalaran approach; this adds a coastal XP circuit rather than another zone trip.
+
+step Stormwind: finish Seeking Wisdom and train
+  zone Stormwind City
+  tip Return through Elwynn or fly to Stormwind. Hand Seeking Wisdom to Bishop Farthing in the Cathedral and train your druid abilities. We stop this chain before its extra Wetlands travel.
+  fly "Stormwind"
+  turnin 293 -- Archbishop Benedictus in the Cathedral: the Eye of Paleth from the Wetlands wreck.
+  turnin 269
+  talk 2327 -- Shaina Fuller is in the Cathedral: check your First Aid rank while here, and make bandages from saved cloth.
+  train class
+  vendor 1298 -- Frederick Stover: repair during this Trade District visit, then restock drinks at the inn.
+  vendor 6740 -- Sell and repair nearby; refill affordable Sweet Nectar before Dalaran.
+  buy 1708 x20 npc 6740 optional
+  talk 211033 optional -- Hand in carried library books at the Mage Tower if the city visit fits your detour budget. The route collects only nearby books, so it does not assume the 10-book necklace or 20-book ring is ready.
+
+step Stormwind: check Tyrion's supplies
+  tip Check your bags for three Silk Cloth and the two Clara's Fresh Apples bought during our Elwynn visit. If fewer than three cloth remain, use Auctioneer Jaxon in the Trade District auction house and buy only the shortfall from player listings, then collect the purchase from a mailbox. Already carrying three skips the purchase goal. If none are affordable, withdraw saved cloth from the bank or obtain the shortfall from a party member; do not leave for Tyrion without it.
+  buy 4306 "Silk Cloth - Auction House shortfall" x3 npc 15659 -- Manual player-listing purchase, not merchant stock; carry three cloth in your bags before continuing.
+
+step Stormwind Keep: finish the Stockades investigation
+  turnin 98190 -- The Menethil statuette introduction is due at Bolvar during this same Keep visit.
+  tip Bring both apples, three Silk Cloth and your party to Tyrion in the keep garden. Deliver the supplies and take The Attack! Let the conversation finish before fighting Lescovar and Marzon; they are level 31 and 30. Attacking early can miss the conversation credit.
+  turnin 2746
+  accept 434 lvl 16 group 5
+  complete 434 group 5
+  turnin 434
+  accept 394 lvl 16
+  turnin 394
+  accept 395 lvl 16
+  turnin 395
+  accept 396 lvl 16
+  turnin 396 -- Claim Seal of Wrynn before leaving Stormwind.
+
+step Fly north for the final outdoor circuit
+  zone Hillsbrad Foothills
+  tip Fly to Southshore using the route learned during our Lordaeron trip. This is the same northern journey needed for Dalaran: do the coastal tasks before the level-30 dungeon breadcrumb. Keep Power Overwhelming and A Green Sample in the log.
+  fly "Southshore"
+  getfp "Southshore" npc 2432
+  vendor 2352 -- Innkeeper Anderson in Southshore: sell low-value loot and refill usable drinks before the shore loop.
+  accept 536 lvl 25
+  accept 98059 lvl 23 -- Captain McManus near the north-west side of town.
+  accept 98071 lvl 23 -- Brewmeister Bilger in Southshore.
+  accept 555 lvl 28
+  buy 3713 x1 npc 2381 -- Soothing Spices from Micha Yance, for the turtle hand-in.
+
+step Hillsbrads council delivery
+  zone Hillsbrad Foothills
+  tip Follow the western road to Hillsbrads town hall. Place the Sealed Company Request on the bookkeeping table beside Magistrate Burnside. These are Alliance townsfolk, not combat targets. If Horde players have killed Burnside, keep the quest and come back on the next pass rather than waiting through a long respawn.
+  use 279386 @29.67,41.64 era -- Use the supplied request at the bookkeeping table; confirm the quest-log credit.
+  turnin 98059
+
+step The western murloc shore
+  zone Hillsbrad Foothills
+  tip Farren needs both kinds of Torn Fin murloc on the shore west of Southshore. They are level 30-32. Work along the waterline and pull back into cleared space; do not run through the village or chase runners into extra packs. This is contested territory, so watch for hostile players.
+  kill 2377 quest 536.1 @43.36,68.20 era
+  kill 2376 quest 536.2 @43.95,68.65 era
+  turnin 536
+  accept 559 lvl 25
+
+step Farrens requested proof
+  tip Return to the same western shore for the heads now that the follow-up is active. These cannot be pre-collected for this quest. Prefer the lower-level Oracles and avoid pulling several casters at once.
+  collect 3716 npc 2376 quest 559.1 @43.95,68.65 era
+  turnin 559
+  accept 560 lvl 25
+  turnin 560
+  accept 561 lvl 25
+  turnin 561
+  accept 562 lvl 25
+
+step The eastern naga shore
+  tip The Daggerspine shore is immediately east of Southshore. Kill the required Shorehunters and Sirens and return when both counts are complete. These enemies are level 30-32; interrupt the Sirens or break line of sight instead of accepting extra spell damage.
+  kill 2369 quest 562.1 @54.48,64.37 era
+  kill 2371 quest 562.2 @54.39,61.98 era
+
+step Dun Garok delivery below the fort
+  tip Continue east from the naga shore to the Alliance fort at Dun Garok. The pin marks the fort, not the exact indoor sack: descend all the way to the bottom floor and find the gathering fireplace. Place the supplied case there, then loot a sack of Homebrew Hops beside it. Do not attack the friendly dwarves. On a PvP realm, watch the approach for hostile players.
+  use 279390 @71.47,79.78 era -- Case of Fallrook Varietal: use beside the bottom-floor fireplace.
+  collect 279389 x1 @71.47,79.78 era -- Loot the Homebrew Hops at the fireplace after delivering the case.
+
+step Turtles on the river near town
+  tip Collect the meat from Snapjaws along the river east of Southshore. Stay in the southern river section; do not follow the spawn list north toward Tarren Mill or into Alterac. Skin the turtles as you go, then return to town.
+  collect 3712 npc 2408 quest 555.1 @55.91,57.08 era
+
+step Southshore: all coastal hand-ins
+  tip Deliver the turtle meat with the spices and finish Farrens shore request. Keep Reassignment for Major Samuelson when the Dalaran chapter returns to Stormwind; it is intentionally not an extra trip now.
+  turnin 98071
+  turnin 555
+  turnin 562
+  accept 563 lvl 25
+  vendor 2352
+  note If real party XP, shared drops or skipped optional fights still leave you below 30, finish a short local reserve on the cleared shore or southern river. Prefer single Snapjaws or isolated lower-level Oracles; stop at 30. This is a variable XP reserve, not an assumed number of dungeon clears.
+  level 30 -- Final live readiness check; modeled XP is an estimate, not a guarantee.

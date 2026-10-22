@@ -1,0 +1,196 @@
+guide aurum-druid/wetlands-outdoors
+title 25 - Wetlands: harbor, raptors and coast
+faction Alliance
+race NightElf
+class Druid
+levels 24-28
+zone Wetlands
+category Leveling
+folder Aurum - Druid and dungeons
+version 2
+next aurum-druid/excavation-site
+
+# Original Aurum route text. Factual quest/objective cross-checks: current
+# Forever data; Polestar 06/07/30-40-01 (GPL-3.0-only); local RXP Wetlands
+# reference with Druid-compatible conditions. No copied private guide text.
+# This explicit quest circuit replaces the former large pre-dungeon grind.
+
+step Menethil: outdoor supplies and errands
+  tip From Svens Camp, return by the road to the nearest learned Alliance flight master at Sentinel Hill, then fly to Menethil. This visit combines outdoor XP with the upcoming Excavation Site trip. Young Crocolisk Skins was completed during Cat Form preparation. The Greenwarden combat is deliberately saved for this visit. Learn the flight path if it was missed and keep the southern dungeon pickups in your log.
+  fly "Menethil Harbor"
+  getfp "Menethil Harbor" npc 1571
+  sethome "Deepwater Tavern" npc 1464
+  vendor 1450 -- Repair at Brahnmar before buying drinks at the inn.
+  vendor 1464 -- Keep 10-20 usable drinks, adjusting the amount to your remaining money and supplies.
+  accept 463
+  accept 98230 lvl 22
+  accept 288 lvl 22
+  buy 2594 x1 npc 1464 -- One Flagon of Mead for Fitzsimmons, not a drink supply stack.
+  turnin 288
+  accept 289 lvl 22
+  accept 526 lvl 20 -- Glorin Steelbrow is upstairs in the tavern; use the staircase.
+  accept 279 lvl 20
+  accept 471 lvl 18
+  accept 470 lvl 19
+  accept 305 lvl 21
+  accept 98282 lvl 20
+  accept 98197 lvl 18
+  accept 464 lvl 23
+  accept 98208 -- Sylessa Duskwhisper is upstairs in the inn.
+
+step Harbor materials
+  tip Gather timber and iron from the piles around Menethil's keep and walls, then deliver them before the coastal loop. These are ground containers in town, not a mining requirement.
+  collect 279821 quest 98197.1
+  collect 279822 quest 98197.2
+  turnin 98197
+
+step Bluegill Marsh
+  tip Leave the harbor north along the coast. Kill the ordinary Bluegill murlocs and isolate Gobbler from his companions. Return to Karl on the pier immediately afterward to unlock the nearby container trail.
+  kill 1024 quest 279.1
+  collect 3618 npc 1259 quest 279.2
+  turnin 279
+  accept 281 lvl 20
+
+step Follow the missing cargo
+  tip Return to the murloc hovels and open the three containers in order from south to north. The containers themselves offer the next clue; take each follow-up before leaving its hovel.
+  turnin 281 @13.5,41.4 era -- Damaged Crate.
+  accept 284 lvl 20
+  turnin 284 @13.6,38.2 era -- Sealed Barrel.
+  accept 285 lvl 20
+  turnin 285 @13.9,34.8 era -- Half-buried Barrel.
+  accept 286 lvl 20
+
+step Coastal crocolisks before the eastward trip
+  tip Collect the giant crocolisk skins from the coast north of the murloc hovels, then return to Menethil. Leave the ship crews, Snellig and Captain Halyndor for after the eastern outdoor circuit: they are much stronger than these early coastal targets.
+  collect 3348 npc 2089 quest 471.1 @17.61,29.11 era
+
+step Menethil: statuette and skin hand-ins
+  tip Return the statuette to Karl and Stoutfist upstairs in the keep, then deliver the giant crocolisk skins to James. Take the scale task for the eastward trip; the wreck quests remain scheduled for later in this chapter.
+  turnin 286
+  accept 98189
+  turnin 98189 -- Deliver Karl Borans statuette to Stoutfist upstairs in the keep.
+  accept 98190 -- Hold the family introduction for our planned Stormwind Keep visit.
+  turnin 471
+  accept 98072 -- Follow-up after Apprentices Duties; save this for the eastern whelps.
+  vendor 1450
+  vendor 1464
+
+step Dragonmaw banners
+  tip On the eastward road, clear the ordinary Dragonmaw Raiders at the western Angerfang camp. They can net you; pull into ground already cleared. Do not enter Nekroshs camp or accept the elite follow-up.
+  collect 3337 npc 1034 quest 464.1 @42.16,44.58 era
+
+step Whelgar's outdoor excavation
+  tip Follow the road east to Whelgar's outdoor dig. Enter from the north, climb the eastern path and cross the wooden bridge to the small cave. Speak to Merrin, Ormer and Whelgar. This is the outdoor excavation, not the dungeon portal.
+  turnin 305
+  accept 306 lvl 21
+  accept 294 lvl 22
+  accept 299 lvl 22
+
+step Lower raptor clear and relics
+  tip Kill the ordinary Mottled Raptors and Screechers around the dig. While clearing, open the relic containers and check loose soil for the four fragments. Keep the Ormer chain moving by returning to him after the first pair of kill objectives.
+  kill 1020 quest 294.1
+  kill 1021 quest 294.2
+  collect 2658 quest 299.1
+  collect 2659 quest 299.2
+  collect 2660 quest 299.3
+  collect 2661 quest 299.4
+  turnin 294
+  accept 295 lvl 22
+  turnin 299
+
+step The stronger raptors
+  tip Clear Scytheclaws and Mottled Razormaws on the valley slopes west of the dig. These are Ormer's ordinary raptors; the larger Highland and Razormaw populations farther north belong to other quests.
+  kill 1022 quest 295.1
+  kill 1023 quest 295.2
+  turnin 295
+  accept 296 lvl 22
+
+step Thelgen spiders
+  tip Continue east and south toward Thelgen Rock. The gland comes from Cave Stalkers and Leech Stalkers around this area; clear the outside spiders first and stop after obtaining one intact gland. Do not clear the whole cave merely for this item.
+  collect 280319 npc 1111 quest 98282.1 @53.01,65.36 era
+
+step Greenwarden: Mosshide prerequisite chain
+  tip Deliver the introduction to Rethiel and complete his two nearby Mosshide tasks. This chain unlocks Horrors in the Highland for Excavation Site. The higher-level marsh enemies were intentionally deferred from the level-20 Cat Form trip.
+  turnin 463
+  accept 276
+  complete 276
+  turnin 276
+  accept 277
+  complete 277
+  turnin 277
+  accept 275
+
+step Greenwarden: Fen Creepers
+  tip Fen Creepers are level 24-25 and hide along the streams. Clear them while working the surrounding marsh now, then report to Rethiel before the dungeon chapter. Avoid attacking higher-level bog beasts just because they share the area.
+  kill 1040 quest 275.1 @55.03,46.43 era
+  turnin 275
+
+step Red whelps along the eastward route
+  tip Collect the crimson scales from ordinary Red Whelps on the eastern marsh. These level-23 whelps are preferable to stronger remote variants; skin them as you go. The delivery follow-up returns to Howin, whom we will visit before the dungeon.
+  collect 279385 npc 1042 quest 98072.1 @59.60,44.11 era
+  accept 469 lvl 18 -- Einar Stonegrip is by the road on the way to Howin; carry his skins to Menethil.
+
+step Green Belt and northern raptors
+  tip Follow the road north-east to Howin Kindfeather and deliver Stoutfist's message. Take both outdoor raptor tasks before heading north. The elite Carnage, Dragonmaw Gates and Goaz guardian chains are not required in this solo circuit.
+  turnin 98230
+  accept 98245 lvl 21
+  accept 98246 lvl 21
+
+step Razormaw nesting grounds
+  tip Follow the path into Raptor Ridge, whose cave mouth is at the marked entrance. Gather incisors from Highland and Elder Razormaws and eggs from their nests. This is a short nest clear with no escort or elite boss; pull into cleared space and retreat if respawns close the exit. Do not run through occupied nests.
+  goto 69.43,34.67 "Raptor Ridge cave entrance" live r 20
+
+step Raptor Ridge nests
+  tip Continue from the entrance into the nesting chambers. Clear toward the eggs with a safe retreat path; leave after both counters are complete.
+  collect 280103 quest 98245.1 @67.44,30.76 live
+  collect 280132 quest 98246.1 @67.44,30.76 live -- Nests along the verified Raptor Ridge loop; check the current quest-log counter before leaving.
+  turnin 98245
+  turnin 98246
+
+step Sida's bag on the western return
+  tip Clear Black Oozes on the marsh route back toward Menethil until Sida's bag drops. Use the western spawn group so this return does not send you to a remote northern pool.
+  collect 3349 npc 1032 quest 470.1 @28.25,45.7 era
+
+step Wrecks after the eastern circuit
+  tip After the eastern circuit, go north along the coast to the Third Fleet wrecks. Snellig is level 29; the earlier tasks give time to reach the appropriate level before this fight. Clear the beach sailors before boarding for the marines; Snellig stands near the southern wreck. Keep away from large groups on the decks and watch your breath underwater.
+  kill 1157 quest 289.1
+  kill 1158 quest 289.2
+  collect 3619 npc 1159 quest 289.3
+  collect 2702 npc 1418 quest 526.1 @19.17,19.51 era -- Bluegill Raiders on the north coast, not the distant Arathi shore.
+
+step Menethil: the completed wreck tasks
+  tip Deliver the crews task and the ingots, then take the captain follow-up before returning to the wreck. Glorin is upstairs in the inn. Repair and refill drinks before fighting the captain.
+  turnin 289
+  accept 290 lvl 22
+  turnin 526
+  vendor 1450
+  vendor 1464
+
+step Captain and the locked strongbox
+  tip Return to the northern wreck. Captain Halyndor is level 30 on deck; clear the approach, pull him alone and take the key. His Ward of the Eye reflects spells: stop casting damage into that buff. The locked strongbox is below deck in the hold: descend inside the ship after looting the captain, then accept the Eye of Paleth from the chest.
+  collect 2629 npc 1160 quest 290.1
+  turnin 290
+  accept 292 lvl 22
+
+step Menethil: finish the coastal story
+  tip Hand the Eye to Glorin upstairs. Keep Cleansing the Eye for the planned Stormwind Cathedral visit later, alongside Seeking Wisdom; no separate city trip is required.
+  turnin 292
+  accept 293 lvl 22
+
+step Southern wreck: recover Nordel
+  tip On the return to Menethil, recover Nordel from the shipwreck just south of town. Check the wreckage before returning to Sylessa upstairs in the inn. The Darkshore delivery follow-up is not part of this southern route.
+  collect 279915 quest 98208.1 @12.10,64.03 live
+
+step Menethil: complete the outdoor circuit
+  tip Return along the road to the harbor and deliver the expedition message, gland and bag. Use your hearth if it is ready and still bound here; do not wait out a cooldown. The following chapter starts the Excavation Site group trip from this same town.
+  turnin 306
+  turnin 98282
+  turnin 470
+  turnin 469
+  turnin 464
+  turnin 98208
+  turnin 98072
+  accept 98240 lvl 19 -- Hold the crimson crate for Howin on the dungeon approach already planned next.
+  vendor 1450
+  vendor 1464
+  level 26 -- Dungeon readiness check after the explicit outdoor quest circuit. The Planner audit reports any remaining XP shortfall separately; no uncounted dungeon runs are assumed.

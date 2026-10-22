@@ -1,0 +1,53 @@
+guide aurum-druid/westfall-deadmines
+title 17 - Moonbrook and Deadmines preparation
+faction Alliance
+race NightElf
+class Druid
+levels 16-18
+zone Westfall
+category Leveling
+folder Aurum - Druid and dungeons
+version 6
+next aurum-druid/redridge-early
+
+# Adapted from Fitz / fitzforge Polestar, GPL-3.0-only.
+# Source: guides/forever/alliance/02-westfall.guide at 1775eb81e56fc1e127ae869ccec0b7dc8d7092fd.
+# Aurum adaptation: Night Elf Druid, southern questing, dungeon interleaving.
+
+step Back to Westfall
+  tip After the Lordaeron rewards and any Stormwind turn-ins, return to Sentinel Hill. You should still have the final People's Militia quest and Moonbrook Espionage from your earlier Westfall visits. Completed quests check off automatically.
+  fly "Sentinel Hill"
+  level 16
+
+step Optional: Furlbrow's pocket watch at 16 or later
+  tip The Forgotten Heirloom is an optional northern detour, not part of the required leveling work. Farmer Furlbrow gives the quest at Jansen Stead. The wardrobe is in the ruined house east of Jangolode Mine, guarded by level-15 Benny Blaanco and nearby Defias. Playtesting found dense guards and rapid respawns here. Only attempt it at 16 or later if the camp is manageable; otherwise skip all three goals and continue. Return the watch to Farmer Furlbrow if you collect it.
+  accept 64 optional
+  collect 841 quest 64 optional
+  turnin 64 optional
+
+step Confirm the held follow-ups
+  tip Gryan Stoutmantle gives the last militia assignment after the western-farm one; Alba gives Moonbrook Espionage after The State of the Mines. These are reminders for the already-accepted quests, not a second set of objectives.
+  accept 14
+  accept 92747
+
+step Moonbrook and the Defias hills
+  tip Defias Pathstalkers and Knuckledusters walk Moonbrook; Highwaymen (level 17) patrol the hills south and east of it in pairs: pull them apart. The Deadmines entrance in the smithy is a group dungeon.
+  kill 121 quest 14
+  kill 449 quest 14
+  kill 122 quest 14
+  collect 254676 quest 92747.1                -- Suspicious Industrial Supplies, from the crates around Moonbrook
+
+step Moonbrook: Bewitchments and Glamours
+  collect 209845 "Bewitchments and Glamours" @45.4,70.5 map 1436 era -- Pick up the book inside the eastern house before leaving Moonbrook. Keep it for the library. Skip this pickup if the house is unsafe.
+
+step Back to Sentinel Hill
+  tip Follow the road north-east from Moonbrook to Sentinel Hill. Do not wait for the hearthstone used after Lordaeron: this is a short walk. You may use it if already ready, but the guide navigates directly to the turn-in without requiring a cast.
+  turnin 14                                   -- Gryan Stoutmantle
+  accept 65                                   -- For Wiley the Black in Lakeshire, Redridge
+  turnin 92747                                -- Alba Fairmoon
+  accept 92748                                optional -- For Sprite Jumpsprocket in Stormwind's Dwarven District
+  vendor 8931 -- Sell, repair nearby and refill 10-20 affordable Melon Juice before the dungeon chain. Keep cloth, leather, your knife and book items.
+  buy 1205 x20 npc 8931 optional
+
+step Continue with the Lakeshire preparation loop
+  note Keep Wiley's Defias report and Sprite's engineering letter. The next chapter combines the required Lakeshire visit with nearby outdoor quests before the level-18 dungeon check.

@@ -1,0 +1,159 @@
+guide aurum-druid/duskwood-first-loop
+title 20 - Duskwood: Darkshire and Raven Hill
+faction Alliance
+race NightElf
+class Druid
+levels 20-22
+zone Duskwood
+category Leveling
+folder Aurum - Druid and dungeons
+version 4
+next aurum-druid/stockades
+
+# Adapted from fitzforge/polestar guides/forever/alliance/05-duskwood.guide
+# at 1775eb81e56fc1e127ae869ccec0b7dc8d7092fd, GPL-3.0-only.
+# Southern route split and readiness notes by Aurum. This is a local guide,
+# not a handoff to the standard pack. Source facts: research/southern-source-map.json.
+
+step Darkshire readiness
+  tip From Lakeshire, follow the road back to Three Corners, then take the road into Duskwood and continue to Darkshire. There is no need to return to Stormwind for this handoff. These pickups are available by 20; several enemies are 24-26, so pull carefully or stay with your leveling partner.
+  level 20
+
+step Darkshire
+  turnin 95161 -- Deliver the Ruins of Lordaeron letter follow-up to Avette Fellwood during this first Darkshire visit.
+  getfp "Darkshire" npc 2409
+  sethome "Darkshire" npc 6790
+  accept 101 lvl 18
+  accept 56 lvl 18
+  accept 96139 lvl 18
+  accept 164 lvl 17
+  accept 165 lvl 17
+  accept 163 lvl 17 -- Elaine Carevin also sends you to Jitters at Raven Hill; this unlocks the spider-leg cooking hand-in.
+  note Keep six Gooey Spider Legs from the spiders in this loop. These are different from the Small Spider Legs used in Teldrassil.
+
+step Viktori Prism'Antras
+  tip Viktori's house stands at the east end of town. Herble Baubbletump sells engineering goods in the house beside it. Keep the Bronze Tube for the next Duskwood chapter. If sold out, check the auction house when the route returns to Stormwind.
+  accept 174 lvl 20
+  buy 4371 x1 npc 3133
+
+step Tranquil Gardens Cemetery
+  tip Skeletal Warriors and Skeletal Mages walk among the graves south-east of Darkshire, below Blind Mary's house. Keep Skeleton Fingers from any skeletons you kill.
+  kill 48 quest 56
+  kill 203 quest 56
+  collect 2378 quest 101
+
+step Darkshire
+  turnin 56
+  accept 57 lvl 18
+  vendor 228 -- Avette Fellwood: sell low-value loot and repair before restocking drinks at the inn.
+  vendor 6790 -- Sell low-value loot, repair nearby, and refill affordable Melon Juice. Keep six Gooey Spider Legs until Dusky Crab Cakes is handed in.
+  buy 1205 x20 npc 6790 optional
+
+step Watcher Dodds
+  tip Follow the road west. Watcher Dodds stands south of it, at the Yorgen Farmstead.
+  accept 245 lvl 17
+
+step Raven Hill
+  tip Continue west to Raven Hill. The Memory of Valor glows by the ruined house south of the road.
+  collect 281046 quest 96139
+  turnin 163
+  accept 5 lvl 17
+
+step Raven Hill Cemetery, south
+  tip Skeletal Horrors and Skeletal Fiends walk the cemetery's southern half. Avoid the roaming elite Mor'Ladim.
+  kill 202 quest 57
+  kill 531 quest 57
+  collect 2378 quest 101
+
+step Sven's Camp
+  tip Follow the road north-west past the cemetery to Sven's camp on the west edge of the forest. Lars stands beside him.
+  turnin 164
+  accept 95 lvl 20
+  accept 226 lvl 19
+
+step Abercrombie
+  tip The hermit's shack stands north-east of Raven Hill Cemetery.
+  turnin 165
+  accept 148 lvl 20
+
+step Wolves, spiders and ghouls
+  tip Rabid Dire Wolves roam around the cemetery and Abercrombie; Starving Dire Wolves roam north-east of him. Pygmy Venom Web Spiders are east of the cemetery. The cemetery's northern ghouls drop fangs. Pull one enemy at a time.
+  kill 565 quest 226
+  kill 213 quest 226
+  kill 539 quest 245
+  collect 1130 quest 101
+  collect 1129 quest 101
+  collect 2251 npc 539 x6 optional -- Keep up to six Gooey Spider Legs while killing the required Pygmy Venom Web Spiders; do not start a separate farm for a missing leg.
+
+step Watcher Dodds
+  tip Follow the road east toward Darkshire.
+  turnin 245
+
+step Yorgen Farmstead
+  tip The mound of loose dirt is south of the farmhouse, by the old stump.
+  turnin 95
+  accept 230 lvl 20
+
+step Darkshire
+  hearth "Darkshire"
+  turnin 96139
+  turnin 57
+  turnin 101
+  turnin 148
+  turnin 5
+  accept 93 lvl 17
+  collect 2251 npc 539 x6 quest 93.1 optional -- Use the legs saved from the loop. Any remainder can wait for the next cemetery visit.
+  turnin 93 optional
+  accept 240 lvl 17 optional
+  accept 149 lvl 20
+  vendor nearest
+
+step Blind Mary
+  tip Her house is on the hill south-east of Darkshire, above Tranquil Gardens Cemetery.
+  turnin 149
+  accept 154 lvl 20
+
+step Madame Eva
+  turnin 154
+  accept 157 lvl 20
+
+step Reach the Stockades pickup level
+  tip Stockades pickups require level 22. If still below 22, finish another Deadmines run with your group or fight nearby Duskwood enemies you can kill comfortably. Keep this guide selected; it continues at 22. Keep five quest log slots free for Stockades. Retain Look to the Stars, Wolves at Our Heels, Sven's Camp and Deliver the Thread for the next Duskwood loop.
+  level 22
+
+step Darkshire: batch Stalvan with the city journey
+  tip At 22, take Crime and Punishment here for Stockades before leaving. Start Stalvan's investigation at Madame Eva and Clerk Daltry. This chapter handles the Moonbrook and Goldshire evidence before the city dungeon; the eastern Elwynn evidence waits until the later Redridge journey.
+  accept 377 lvl 22 group 5
+  accept 66 lvl 22
+  turnin 66
+  accept 67 lvl 22
+
+step Moonbrook schoolhouse evidence
+  zone Westfall
+  tip Fly to Sentinel Hill, then follow the southwest road into Moonbrook. Open the Old Footlocker in the schoolhouse. Beware of the apparition when interacting; clear nearby Defias first. Keep your hearth bound in Darkshire.
+  fly "Sentinel Hill"
+  turnin 67
+  accept 68 lvl 22
+
+step Bring the evidence back to Daltry
+  zone Duskwood
+  tip Return to Sentinel Hill and fly to Darkshire; this avoids waiting for the hearth used earlier in the chapter. Hand the letter to Clerk Daltry and take the lead for Goldshire before continuing to Stormwind.
+  fly "Darkshire"
+  turnin 68
+  accept 69 lvl 22
+
+step Goldshire: upstairs evidence and supplies
+  zone Elwynn Forest
+  tip Follow the northbound road from Darkshire through Elwynn to Goldshire. Speak with Farley, then take the letter from the upstairs chest in the inn. Keep the letter for Caretaker Folsom in Stormwind.
+  turnin 69
+  accept 70 lvl 22
+  collect 910 quest 70.1
+  vendor 295 -- Sell and refill affordable drinks during this inn stop.
+
+step Stormwind: the canal evidence
+  zone Stormwind City
+  tip Continue north to Stormwind. Speak with Caretaker Folsom and inspect his Sealed Crate nearby. Hold the Eastvale follow-up until the later Redridge trip, so this investigation does not add a separate east-Elwynn journey now.
+  turnin 70
+  accept 72 lvl 22
+  turnin 72
+  accept 74 lvl 22

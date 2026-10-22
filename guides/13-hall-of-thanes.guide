@@ -1,0 +1,104 @@
+guide aurum-druid/hall-of-thanes
+title 12 - Dun Morogh and the Hall of Thanes
+faction Alliance
+race NightElf
+class Druid
+levels 12-16
+zone Dun Morogh
+category Dungeons
+folder Aurum - Druid and dungeons
+version 10
+next aurum-druid/westfall-return
+
+step Ready for the first dungeon
+  zone Stormwind City
+  tip Bind at the Trade District inn for your return after the Hall. Finish the Dun Morogh quests before joining a group at level 13 or higher.
+  sethome "Stormwind City" npc 6740 -- Set your Hearthstone with Innkeeper Allison before training and taking the tram.
+  note Collect the map prerequisite and Ironforge quests before entering.
+
+step Stormwind training
+  zone Stormwind City
+  tip Follow the road north to Stormwind. Train your Druid spells, then head to the Dwarven District tram.
+  train class
+
+step Dwarven District: take the Deeprun Tram
+  zone Stormwind City
+  tip Walk to the Dwarven District and enter the Deeprun Tram. Board a tram to Ironforge; use the opposite station exit after it stops.
+  goto 69.58,30.27 "Deeprun Tram: Stormwind entrance" live r 20
+
+step Ironforge arrival and flight path
+  zone Ironforge
+  tip Visit Gryth Thurden at the Great Forge, then train Two-Handed Maces in the Military Ward before leaving Ironforge.
+  getfp "Ironforge" npc 1573
+  vendor nearest
+  note Repair and buy roughly 10-20 drinks usable at your current level, within your budget. Keep the skinning knife and leave bag space for the dungeon's quest items.
+  learn 199 "Two-Handed Maces" npc 11865 -- Buliwyf Stonehand, Timberline Arms in the Military Ward. Costs 10 silver before reputation discounts.
+
+step Steelgrill's Depot: a visitor to Dun Morogh
+  zone Dun Morogh
+  tip Follow the road downhill from Ironforge to Steelgrill's Depot. Speak to Beldin Steelgrill before visiting Farsen.
+  accept 96408 lvl 9
+
+step Earthseer Farsen: use his farsight
+  tip Follow the road east toward Gol'Bolar Quarry. Take the path up to Farsen's campsite overlooking the quarry. Deliver Beldin's message, then choose Farsen's farsight dialogue and claim the reward.
+  turnin 96408 xp 680
+  accept 96392 lvl 9
+  complete 96392 @64.87,58.47 era -- Speak to Farsen and choose his farsight dialogue.
+  turnin 96392 xp 680
+  accept 96390 lvl 9
+
+step Gol'Bolar Quarry: two trogg jobs
+  accept 432 lvl 5 -- Speak to Foreman Stonebrow at the quarry camp.
+  accept 433 lvl 6 -- Senator Mehr Stonehallow stands nearby.
+
+step Gol'Bolar Quarry: clear the troggs
+  tip Kill troggs around the quarry and its mine. Pull one at a time.
+  kill 1115 x6 quest 432.1 @69.65,57.08 era
+  kill 1117 x10 quest 433.1 @70.67,56.64 era
+
+step Dark Iron spies and the map
+  zone Dun Morogh
+  tip Kill ten Dark Iron Spies, levels 9-11, near Ironband's Compound. Loot the Dark Iron Map and use it to begin Underground Map. Avoid Captain Beld.
+  kill 6123 x10 quest 96390.1
+  collect 274268 x1 npc 6123 -- Use the map after it drops from a Dark Iron Spy.
+  accept 96391 item 274268 lvl 9
+
+step Gol'Bolar Quarry: claim both rewards
+  turnin 432 xp 590
+  turnin 433 xp 660
+
+step Farsen: outdoor rewards and dungeon request
+  tip Return to Farsen, claim both rewards, and accept Old Ironforge Incursion.
+  turnin 96390 xp 910
+  turnin 96391
+  accept 96393 lvl 9 group 5
+
+step Ironforge pickups
+  zone Ironforge
+  accept 96394 lvl 10 group 5 -- Enter the High Seat (King Magni's throne room). Immediately turn left into the cobwebbed passage and follow it down. Afadra is up the stairs above the dungeon entrance.
+  accept 96403 lvl 10 group 5 -- Continue down to the bridge and meeting stone. Thom stands beside the bridge before the dungeon portal.
+
+step Enter the Hall of Thanes
+  tip Join a full group at level 13 or higher. Follow the bridge to the portal. Inside, head west to Anvilmar's Rest and speak to the Ghostly Attendant before fighting Faldrim.
+  goto 27.6,47.8 "Hall of Thanes approach" live r 25
+  accept 96395 npc 265002 lvl 10 group 5 -- West wing, Anvilmar's Rest.
+
+step Complete the dungeon quests
+  tip Clear the dungeon with your group. Collect the heirlooms, finish the spirit objectives, and loot Durgen's head. Before leaving, check the vault area for the item that starts The Treaty of Understanding.
+  complete 96403 group 5
+  complete 96394 group 5
+  complete 96393 group 5
+  note Defeat Faldrim Anvilmar before returning to the Ghostly Attendant.
+  accept 98423 item 281030 lvl 9 -- Inspect the treaty tablet behind the side-vault door in the final boss room, the Reliquary of Kings.
+
+step Inside turn-in
+  tip Return to the Ghostly Attendant before leaving the instance.
+  turnin 96395 npc 265002
+
+step Ironforge rewards
+  zone Ironforge
+  turnin 96403
+  turnin 96394
+  turnin 96393
+  turnin 98423 -- Take the treaty to Magni with Durgen's head before returning south.
+

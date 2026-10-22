@@ -1,0 +1,476 @@
+guide aurum-druid/start-here
+title 01 - Teldrassil and Bear Form
+faction Alliance
+race NightElf
+class Druid
+levels 1-11
+zone Teldrassil
+folder Aurum - Druid and dungeons
+next aurum-druid/westfall-early
+author Aurum; adapted from The Polestar authors
+version 29
+keywords druid,night elf,forever,start,bear form,teldrassil
+
+# Copyright (c) 2026 The Polestar authors. Licensed GPL-3.0-only.
+# Aurum adaptation: own namespace and next chapter; Druid-only display; explicit Zarrin trainer.
+# Live-play fixes: southern Grell/totem camp, Mardant ramp access and a single deep cave visit.
+# The starting route is incorporated here, not loaded from another guide pack.
+# Source: https://github.com/fitzforge/polestar/blob/1775eb81e56fc1e127ae869ccec0b7dc8d7092fd/guides/forever/alliance/nightelf/01-teldrassil.guide
+# Source SHA-256 (LF normalized): 3323038c8565c7e5654deaf0bb423fac680890b88954a98450540bb6284676c5
+# See LICENSE and THIRD-PARTY-CREDITS.txt in this pack.
+# Quest IDs, coordinates and route text retain their verified source values.
+# Original source includes the full Bear Form chain and Auberdine-Stormwind boat.
+# Level range is a planning estimate, not a promise of exact earned XP.
+# Profession/supply support: explicit NPCs and items checked in local Forever
+# npcs/items/quests.json and `polestar find`. Training prices/minimum levels
+# and vendor stock still need a live check. Profession training and the knife
+# are required; supply visits are required, with purchase amounts adjusted to money.
+# This revision removes the Ban'ethil/Ursal dependency branch for solo release play.
+# Migrate progress by quest/goal identity; old numeric step indices must not be reused.
+
+step Aldrassil
+  note Do not sell any meat, Light Leather or leather scraps. Save them for Cooking 20 and Leatherworking 20 later in this guide.
+  tip You start at the foot of Aldrassil, the great tree of Shadowglen.
+  accept 456                                  -- Conservator Ilthalaine
+  accept 458                                  -- Melithar Staghelm, by the path
+  turnin 458 choose 247846                    -- Choose Pelt Collecting for Beginners, then use it to learn Skinning.
+  accept 459
+  accept 97977
+
+# Fel Moss camp: local data/forever/objects.json, object 668482, map 1438,
+# has a Gnarlpine Totem at 55.8,44.3 in the Era frame. Within 100 yd are
+# 13 recorded Grell/Grellkin spawns (NPCs 1988/1989 in npcs.json) and 3 totems;
+# the northern totem camp at 55.1,39.7 has 9 droppers within the same radius.
+# Item 3297 drops from both mobs (items.json); quest 459.1 requires 8.
+# An explicit collect point keeps this camp first; other spots remain manual alternatives.
+step The Balance of Nature
+  tip Kill Young Nightsabers and Young Thistle Boars near Aldrassil.
+  kill 2031 quest 456.1
+  kill 1984 quest 456.2
+
+step Ilthalaine and Dirania
+  tip Return to Ilthalaine at Aldrassil, then speak to Dirania east of the tree.
+  turnin 456                                  -- Conservator Ilthalaine, back at Aldrassil.
+  accept 457
+  accept 3120 only Druid                      -- Take Verdant Sigil for your first visit to Mardant.
+  accept 4495                                 -- Dirania Silvershine, east of the tree; available from level 2.
+
+step Terunne: get your Skinning Knife
+  buy 7005 x1 npc 267333                      -- Buy one knife for 10 copper before the next hunting loop.
+  buy 277114 x1 npc 267333                    -- One Apprentice's Skinning Satchel, 25 copper.
+
+step Mardant: learn Mark of the Wild
+  tip Inside Aldrassil, follow the western ramp to Mardant's alcove on the first landing. Learn Mark of the Wild for 10 copper, then cast it on yourself.
+  turnin 3120 only Druid                      -- Hand Verdant Sigil to Mardant, then train.
+  learn 1126 "Mark of the Wild (Rank 1)" npc 3597
+
+step Dellylah: sell junk and buy water
+  tip Visit Dellylah inside Aldrassil. Sell grey items and unwanted gear, then buy as much Refreshing Spring Water as you can afford. Keep your equipped gear and quest items.
+  vendor npc 6091 "Sell junk at Dellylah"      -- Keep ALL meat, Light Leather and leather scraps for Cooking 20 and Leatherworking 20. Keep cloth and other crafting materials too.
+  buy 159 x5 npc 6091                         -- Five is the minimum. Buy more bundles with your remaining money before leaving.
+
+step Southern Grell camp
+  tip Gather Fel Moss from Grells and Grellkin while destroying the nearby Gnarlpine Totems.
+  collect 3297 quest 459.1 @55.8,44.3 era    -- Farm the southern Grell and Grellkin camp beside the totems.
+  interact 668482 quest 97977.1               -- Gnarlpine Totem
+
+step Thistle Boars on the way north
+  tip Kill Thistle Boars as you head north toward Iverron outside Shadowthread Cave.
+  kill 1985 quest 457.2                       -- Finish Thistle Boars while travelling north toward Iverron.
+
+step Iverron: A Good Friend
+  tip Speak to Iverron west of the cave mouth and accept his request for an antidote.
+  turnin 4495                                 -- Iverron waits west of the cave mouth. Stay outside the cave for this visit.
+  accept 3519
+  note Return to Aldrassil; use your Hearthstone if it is ready and still bound to Shadowglen.
+
+# Mardant: quest 3120 objective text places NPC 3597 inside Aldrassil in Shadowglen.
+# Ramp/first-landing alcove: https://www.wowhead.com/wotlk/npc=3597/mardant-strongoak#comments (Taraezor).
+step Back at Aldrassil
+  turnin 459                                  -- Tarindrella
+  turnin 97977
+  accept 97979                                -- Shanda: enter Aldrassil at the front entrance and go up its ramp.
+  turnin 97979
+  turnin 3519                                 -- Dirania Silvershine.
+  accept 3521                                 -- Unlock the antidote ingredients before killing the spiders.
+  accept 916                                  -- Gilshalan Windwalker, on the tree's ramp
+  vendor npc 6091 "Sell junk at Dellylah"     -- Keep all meat, Light Leather, scraps, cloth and quest items. Save 2 silver for Moonfire and Rejuvenation at level 4; restock water with spare money.
+  buy 159 x5 npc 6091 optional                -- Five is a minimum, not a limit. Buy more water with your spare money.
+
+# Outside-cave pass: quest 916 needs 10 item 5166 from NPC 1986, which also
+# drops the antidote's item 10640. Quest 917 requires turning in 916 first.
+# Save NPC 1994/item 277190 for the later egg trip rather than entering twice.
+# Local data/forever/{quests,items,npcs}.json verifies these relationships
+# and Githyiss's Era position, map 1438, 56.65,26.31. The mouth is the same
+# verified 57,32 used by the second visit below (guides-reported.test.js).
+# Client geometry build 1.60.1.70425: `nav path 1438 57,32 1438 56.65,26.31`
+# found 343 yd of walk/indoor route, no falls: central passage to 56.53,26.92,
+# left via 55.75,25.51 and 55.75,25.14, then up around 55.99,24.95 and
+# 56.16,24.95 to the ledge at 56.65,25.63 and the boss. These are directions,
+# not an automatic interior path: the guide points to the mouth, then the boss area.
+step Venom and antidote ingredients
+  tip Gather Moonpetal Lilies at the ponds north of Aldrassil, then kill Webwood Spiders outside Shadowthread Cave for both venom sacs and the antidote ichor. Do not go to Githyiss yet: the egg quest unlocks only after the venom turn-in. Finish Mangy Nightsabers on the loop and gather mushrooms on the return through the Grell camps.
+  kill 2032 quest 457.1
+  collect 10641 quest 3521.2 @57.73,37.53 era -- Moonpetal Lilies by the ponds, on the way north.
+  collect 5166 npc 1986 quest 916.1 @57.19,32.28 era -- Farm Webwood Spiders outside the cave mouth. Save the deep cave for the egg and Fang together.
+  collect 10640 npc 1986 quest 3521.3 @57.19,32.28 era -- The same Webwood Spiders provide the antidote's Webwood Ichor.
+  collect 10639 quest 3521.1 @55.8,44.3 era   -- Hyacinth Mushrooms from Grells and Grellkin, or mushroom pickups along the return.
+
+step Aldrassil
+  turnin 916                                  -- Gilshalan Windwalker
+  accept 917                                  -- Webwood Egg unlocks after Webwood Venom. Take it before entering the cave.
+  turnin 457                                  -- Conservator Ilthalaine
+
+# Actual spell checks: trainer-window visits do not prove a spell was learned.
+# EarlyTraining.lua makes level-4 spells required only once they are available.
+step Mardant: train your Druid spells
+  tip Sell spare loot first. At Mardant's first-landing alcove, learn Mark of the Wild, plus Moonfire and Rejuvenation from level 4. Each level-4 spell costs 1 silver.
+  learn 1126 "Mark of the Wild (Rank 1)" npc 3597
+  learn 8921 "Moonfire (Rank 1)" npc 3597 optional
+  learn 774 "Rejuvenation (Rank 1)" npc 3597 optional
+
+step Dirania: collect Iverron's antidote
+  turnin 3521                                 -- Dirania Silvershine: finish other town errands before taking the timed delivery.
+  accept 3522                                 -- The antidote expires after five minutes. Go directly to Iverron before entering the cave.
+
+# Shadowthread Cave: "The eggs are at 57,26 / The cave is at 57,32"
+# (https://www.wowhead.com/classic/quest=917, comments).
+step Iverron and Shadowthread Cave
+  tip Deliver the timed antidote to Iverron first. With Webwood Egg in your quest log, enter the cave once for both the egg and Githyiss's Fang.
+  turnin 3522                                 -- Iverron, west of the cave mouth. Deliver before fighting inside.
+  goto 57.0,32.0 "Shadowthread Cave"
+
+step Webwood Egg and Githyiss
+  tip Follow the central tunnel and then the left-hand rising path to the rear ledge. Kill Githyiss and loot her Fang, and collect a Webwood Egg on this same visit. Start the Fang quest from the item before taking the next return step.
+  collect 277190                              -- Githyiss the Vile, at the rear ledge inside the cave.
+  collect 5167 quest 917.1
+  accept 97236                                -- Use the Fang of Githyiss in your bags to start its quest.
+
+step Aldrassil
+  tip Hand both cave quests to Gilshalan, then climb to Tenaron.
+  spiritreturn 58.71,42.33 "Shadowglen graveyard" r 35
+  turnin 97236                                -- Gilshalan takes both the Fang and the egg.
+  turnin 917                                  -- Gilshalan Windwalker
+  accept 920
+  turnin 920                                  -- Tenaron Stormgrip, at the top of the tree
+  accept 921
+
+step The Shadowglen moonwell
+  tip Fill the Crystal Phial at the moonwell north of Aldrassil, then return to Tenaron. Iverron's antidote was delivered before the cave, so there is no second delivery detour here.
+  use 5185 quest 921.1 @60.0,33.0 -- Fill the quest phial at this moonwell. Completion is tracked from the filled-phial objective; the item button belongs to this step only.
+
+step Tenaron Stormgrip
+  tip Back to the top of Aldrassil. The Lost Journal lies beside him.
+  spiritreturn 58.71,42.33 "Shadowglen graveyard" r 35
+  turnin 921
+  accept 928
+  accept 96630                                -- Lost Journal
+  vendor npc 6091 "Sell junk at Dellylah"     -- Keep all meat, Light Leather, scraps, Small Spider Legs, your Skinning Knife and other crafting materials. Restock Ice Cold Milk from level 5; reserve spell money.
+  note Skin eligible beasts as you complete normal quests. Keep the leather and scraps for Leatherworking; there is no separate skinning grind. Reserve seven Small Spider Legs for Zarrin's cooking quest.
+
+step Porthannius
+  tip Leave Shadowglen by the path south-east of Aldrassil: Porthannius stands beside it, where it goes down towards the road to Dolanaar.
+  accept 2159                                 -- Porthannius
+
+# ---------------------------------------------------------------- Dolanaar
+
+step Zenn Foulhoof
+  tip Follow the road from Shadowglen toward Dolanaar. Take Zenn's quest as you pass him east of town, so nearby beast drops count immediately.
+  accept 488
+
+step Dolanaar
+  tip Finish the northern errands, then the inn and southern trainers.
+  turnin 96630                                -- Lyreena Duskblade, by the campfire
+  accept 997                                  -- Syral Bladeleaf
+  train First Aid Apprentice npc 6094          -- Byancie, north of the inn: learn First Aid and the available bandage recipe. Already knowing Apprentice First Aid satisfies this goal. Use spare cloth for bandages between fights; do not check this done if training was not learned.
+  talk 3608                                   -- Aldia: check your empty bag slots. Buy and equip an affordable bag only after reserving money for drinks, spells and Leatherworking. Keep a larger bag rather than replacing it with a pouch.
+  buy 4496 x1 npc 3608 optional              -- Aldia: buy and equip a Small Brown Pouch only if you have an empty bag slot and money left after training and drinks. Do not replace a larger bag.
+  vendor 3609                                 -- Shalomon: sell junk and repair. Keep all meat, Light Leather and scraps for Cooking 20 and Leatherworking 20, plus cloth and quest items.
+  turnin 2159                                 -- Innkeeper Keldamyr
+  sethome "Dolanaar" npc 6736                 -- Innkeeper Keldamyr
+  vendor npc 6736 "Restock at Innkeeper Keldamyr"                                 -- Innkeeper Keldamyr: refill to about 10-20 Ice Cold Milk (level 5+) for the next quest loops, or as much as you can afford after training and repairs. Carry a few usable foods; use looted or cooked food first.
+  buy 1179 x10 npc 6736 optional             -- Druid supply stop: if level 5 or above, refill to about 10 Ice Cold Milk, or buy fewer if money is tight. Keep money for spells and profession training; skip if your existing drinks are sufficient.
+  train class
+  turnin 928                                  -- Corithras Moonrage, south of the inn
+  accept 929
+  note Keep 7 Small Spider Legs for Recipe of the Kaldorei at Zarrin. These are the Teldrassil cooking items; Gooey Spider Legs are a different item used later in Duskwood. Keep cloth, leather, scraps and useful cooking meat when selling.
+
+step Zenn's Bidding and the Starbreeze moonwell
+  tip Nightsabers, Strigid Owls and Webwood Lurkers live along the road east. The moonwell is at the west edge of Starbreeze Village.
+  collect 3409 quest 488.1                    -- Nightsaber Fang
+  collect 3411 quest 488.2                    -- Strigid Owl Feather
+  collect 3412 quest 488.3                    -- Webwood Spider Silk
+  use 5619 quest 929.1 @63.4,58.1 -- Fill the quest phial at this moonwell. Completion is tracked from the filled-phial objective; the item button belongs to this step only.
+  turnin 488                                  -- Zenn Foulhoof, on the way back
+
+step Dolanaar quests
+  tip Finish the campfire, then the northern building before heading south to Zarrin.
+  accept 96606                                -- Lyreena Duskblade
+  complete 96606 @57.7,56.7                   -- /sit by Lyreena's campfire until you get Boosted Rest
+  turnin 96606
+  accept 96634
+  accept 475                                  -- Athridas Bearmantle
+  accept 98391                                -- Laurna Morninglight. This delivery goes to Sister Aquinne in Darnassus during the later city visit; a green completed entry in your log is expected until then.
+  accept 87288                                -- Aldia, upstairs in the northern Dolanaar building; take the ramp.
+  buy 4471 x1 npc 3608                       -- Aldia: keep one Flint and Tinder; it is a reusable tool, not one consumed per fire.
+  buy 4470 x5 npc 3608                       -- Five Simple Wood will make five Basic Campfire Kits once Cooking reaches 20.
+  accept 932                                  -- Tallonkai Swiftroot, on the upper platform of the Dolanaar tree; follow its ramp up.
+  accept 2438
+  accept 489                                  -- Sentinel Kyra Starsong
+  accept 99046                                -- Hold this delivery for Sentinel Eralya Leafshadow on the road to the Oracle Glade; no immediate backtrack is needed.
+  turnin 929                                  -- Corithras Moonrage
+  accept 933
+
+step Zarrin: Cooking and spider legs
+  complete 96634 @57.12,61.30                 -- Speak with Zarrin, the friendly Cooking trainer south of the inn, to complete the quest objective.
+  turnin 96634                                -- Zarrin
+  train Cooking Apprentice npc 6286          -- Learn Cooking from Zarrin while already here. This is complete only once the profession is learned; do not mark it done just for visiting him.
+  accept 4161                                 -- Zarrin
+  note Use your gathered ingredients to practise Cooking when convenient, but reserve the 7 Small Spider Legs until this quest is handed in. Buy recipe ingredients only after checking the price; this route does not require buying a stockpile.
+
+# ---------------------------------------------------------------- East: Starbreeze and Lake Al'Ameth
+
+
+step East to Starbreeze Village
+  tip Fel Cones lie under the trees all around Dolanaar and Zenn. Nightsabers and Webwood Lurkers keep roaming the road east. Tallonkai's Dresser is in the house on the hill at the east end of the village.
+  collect 3418 quest 489.1
+  collect 280087 quest 87288.1                -- Nightsabers
+  # Private build uses a quest-tracked kill goal for Polestar #356; progress still counts legs.
+  collect 5465 npc 1998 quest 4161.1 @59.55,59.70 -- Kill Webwood Lurkers along the road east of Dolanaar; keep the Small Spider Legs for Zarrin.
+  turnin 475                                  -- Gaerolas Talvethren, upstairs in the Starbreeze building; use the interior ramp.
+  accept 476
+  collect 8048 quest 2438.1 @68.0,59.6        -- Tallonkai's Dresser
+
+step Zenn Foulhoof
+  turnin 489
+
+step Lake Al'Ameth
+  tip Stay around Lake Al'Ameth by Denalan. Kill the nearby Timberlings for seeds and gather the sprouts among them, then return to him. There is no northern Elder Timberling trip for this step.
+  turnin 997                                  -- Denalan
+  accept 918
+  accept 919
+  collect 5168 npc 2022 quest 918.1 @61.53,69.35 -- Kill the level 5-6 Timberlings around Denalan and the lake while gathering Timberling Sprouts.
+  collect 5169 quest 919.1
+  turnin 918
+  accept 922                                  -- Keep this delivery for Rellian Greenspyre in Darnassus; it is scheduled with the city visit after the outdoor loops.
+  turnin 919
+
+step Dolanaar
+  tip Zarrin and Kal first; finish supplies and the northern building before finding Amara.
+  turnin 4161                                 -- Zarrin
+  train class
+  vendor 3609                                 -- Sell grey loot and repair. Keep all meat, Light Leather, scraps and cloth; save seven Small Spider Legs until their quest is handed in.
+  vendor npc 6736 "Restock at Innkeeper Keldamyr"                                 -- Refill your usable drinks to about 10-20 before leaving for Fel Rock and the outdoor western loop; buy fewer if money is needed for the Leatherworking trainer on this loop. Do not buy drinks above your level.
+  turnin 476                                  -- Athridas Bearmantle
+  turnin 87288                                -- Aldia, upstairs in the northern Dolanaar building; take the ramp.
+  turnin 2438                                 -- Tallonkai Swiftroot, on the upper platform of the Dolanaar tree; follow its ramp up.
+  accept 2459
+  accept 487 -- Amara patrols the road west of Dolanaar. Click her target button while searching; wait if she is fighting.
+
+# ---------------------------------------------------------------- West: Fel Rock to Gnarlpine Hold
+
+# Client-derived cave boundary; private build adds its verified floor height.
+# Explore retains terrain routing for the next objective in Polestar 0.2.5.
+
+step Fel Rock's mouth
+  explore 54.60,52.10 "Fel Rock entrance" r 15
+
+step Fel Rock
+  tip Use the target button to find Lord Melenas. Check the cave's chambers and ledges; he has several spawn locations.
+  collect 5221 quest 932.1                    -- Lord Melenas
+
+step The road to Darnassus
+  tip Gnarlpine Ambushers hide along the road west of Fel Rock.
+  kill 2152 quest 487.1
+  turnin 487                                  -- Find Amara on the same road patrol after the six ambushers; hand this in now instead of carrying it through the western loop.
+  train Leatherworking Apprentice npc 3605    -- Nadyia Maneweaver, in the hut north of the road: learn Leatherworking now. Sell spare loot if short of money; leave this goal incomplete until the profession is actually learned.
+  train Skinning Apprentice npc 6287         -- Radnaal beside Nadyia is a catch-up check for Skinning. Already knowing Apprentice Skinning completes it; learn it here if still missing.
+  buy 7005 x1 npc 3605                        -- Knife check: Nadyia sells a replacement if needed. One already in your bags satisfies the goal.
+  note Turn scraps into Light Leather and practise recipes with your gathered materials when resting. Buy thread only for recipes you intend to make; do not spend your spell or drink money buying bulk leather. At a later town visit, raise the profession rank when its current skill cap is near.
+
+step The Pools of Arlithrien
+  tip Stay outdoors and head south-west from the road to the Pools of Arlithrien. Do not enter Ban'ethil: the relics, Rageclaw and its escort are omitted from this solo route. The moonwell sits beside the pools.
+  use 5621 quest 933.1 @42.4,67.1 -- Fill the quest phial at this moonwell. Completion is tracked from the filled-phial objective; the item button belongs to this step only.
+
+step Gnarlpine Hold
+  tip South of the pools. The Strange Fruited Plant grows by the Hold.
+  accept 930                                  -- Strange Fruited Plant
+
+# ---------------------------------------------------------------- Back to Dolanaar
+
+step Hearth to Dolanaar
+  tip Finish the southern hand-ins and supplies, then visit Tallonkai upstairs.
+  hearth "Dolanaar"
+  turnin 933                                  -- Corithras Moonrage
+  accept 7383
+  vendor 3609                                 -- Sell unwanted loot and repair. Keep all meat, Light Leather, scraps, cloth, quest items and library books.
+  vendor npc 6736 "Restock at Innkeeper Keldamyr"                                 -- Restock usable drinks and food before the Ferocitas trip. Aim for 10-20 drinks, subtracting what is already in your bags; keep training money aside.
+  turnin 932                                  -- Tallonkai Swiftroot, on the upper platform of the Dolanaar tree; follow its ramp up.
+
+step Ferocitas the Dream Eater
+  tip Gnarlpine Mystics and Ferocitas camp north-east of Starbreeze Village. Ferocitas drops the Gnarlpine Necklace: open it for the jewel.
+  kill 7235 quest 2459.1
+  collect 8050 quest 2459.2 @69.4,53.4
+  spiritreturn 56.22,63.29 "Dolanaar graveyard" r 35
+  turnin 2459                                 -- Tallonkai Swiftroot, back on the upper platform of the Dolanaar tree; follow the ramp up.
+
+# ---------------------------------------------------------------- The Oracle Glade
+
+step Sentinel Eralya Leafshadow
+  tip Take the road north-west from Dolanaar towards the Oracle Glade; she lies hurt beside it.
+  turnin 99046
+  accept 99047
+
+step The Oracle Glade
+  tip The moonwell is in the middle of the glade. The Strange Fronded Plant grows at its north end.
+  use 18152 quest 7383.1 @38.4,34.1 -- Fill the quest phial at this moonwell. Completion is tracked from the filled-phial objective; the item button belongs to this step only.
+  accept 937                                  -- Sentinel Arynia Cloudsbreak, by the moonwell
+  accept 931                                  -- Strange Fronded Plant
+
+step Bloodfeather harpies
+  tip The Bloodfeather harpies nest on the slopes west and north of the glade. Pull one at a time; favour the weaker varieties for belts and avoid extra Matriarch pulls because their spells and healing slow down a solo Druid.
+  collect 5204 quest 937.1                    -- Bloodfeather Belt
+
+step Sentinel Arynia Cloudsbreak
+  tip Back to the moonwell.
+  turnin 937
+  accept 98392
+
+step The named harpies
+  tip Hatescreech and Windmistress Gaedress fly just west of the moonwell, Witchmother Arysa further north.
+  collect 280831 quest 98392.1                -- Hatescreech's Amulet
+  collect 280832 quest 98392.2                -- Windmistress Gaedress' Amulet
+  collect 280834 quest 98392.3                -- Witchmother Arysa's Amulet
+
+step Sentinel Arynia again
+  turnin 98392
+  accept 98398
+  turnin 98398                                -- Oracle Tree Bark, just west of the moonwell
+  accept 940                                  -- Take the tree's report while here; Fandral receives it during the planned Darnassus visit.
+
+step Dolanaar
+  tip Return to Dolanaar; hearth if ready. Finish the northern errands, supplies, then Corithras before leaving for the lake.
+  turnin 99047                                -- Byancie
+  accept 99050
+  buy 3371 x1 npc 3614 -- Buy one Empty Vial from Narret for Byancie.
+  accept 97946                                -- Lyreena: Camping 101 for Leatherworking, after The Great Outdoors and learning Leatherworking.
+  vendor 3609                                 -- Sell grey loot and repair. Keep all meat, Light Leather and scraps for Cooking 20 and Leatherworking 20, plus cloth and the quest's water and vial.
+  vendor npc 6736 "Restock at Innkeeper Keldamyr"                                 -- Buy enough usable drinks and food for Bear Form travel, with about 10-20 drinks as a starting target. Keep the one Refreshing Spring Water needed by Byancie separate. Reserve money for spells and flights.
+  buy 159 x1 npc 6736 -- Save one Refreshing Spring Water for Byancie.
+  turnin 7383                                 -- Corithras Moonrage
+  accept 935                                  -- Fandral in Darnassus takes it
+
+step Lake Al'Ameth
+  tip South-east of Dolanaar, to Denalan. Lasher Sproutlings wander around him on the shore.
+  turnin 930                                  -- Denalan
+  turnin 931
+  accept 2399                                 -- Sprouted Frond, beside him
+  turnin 2399
+  collect 286017 quest 99050.1                -- Dewy Lasher Frond
+
+step Dolanaar again
+  turnin 99050                                -- Byancie
+  accept 99073
+
+step Level 10 and Bear Form training
+  tip Denalan's fruit and frond quests and Byancie's return are handed in before this check. Use their banked XP before visiting Kal. If still short, finish nearby level-appropriate quest work or skin ordinary beasts; stop as soon as level 10 is reached. This checkpoint does not assume tent, rested or party XP.
+  level 10
+  accept 5925 only Druid                      -- Kal: take Heeding the Call only after level 10; Mathrengyl receives it in Darnassus.
+  train class
+
+step Campfire supplies for the road
+  tip At Zarrin in southern Dolanaar, use meat gathered during the quest loops to reach Cooking 20 and learn Basic Campfire. Craft five kits using the five Simple Wood already bought; keep Flint and Tinder in your bags. These are inventory targets, so existing supplies count. Do not spend class-training money on an unnecessary crafting grind.
+  skill Cooking 20
+  learn 1229737 "Basic Campfire" npc 6286
+  collect 279981 x5 @57.12,61.30              -- Craft until five Basic Campfire Kits are in your bags; one wood makes one kit.
+
+step Sentinel Eralya Leafshadow
+  tip Take the road north-west from Dolanaar again; she still lies beside it, on the way to Darnassus.
+  turnin 99073
+
+# ---------------------------------------------------------------- Darnassus and Rut'theran
+
+step Nadyia: tents for the journey
+  tip Stop at Nadyia's hut north of the road on the way to Darnassus. Use the leather saved from normal skinning to reach Leatherworking 20, finish Camping 101 and learn Camp Tent. Each craft uses five Light Leather and makes two tents; three crafts provide six. Prepare at least five tents without buying an arbitrary extra stock of leather.
+  skill Leatherworking 20
+  complete 97946 @41.88,49.44                 -- Speak with Nadyia; this quest objective is conversation, not killing the trainer.
+  turnin 97946
+  learn 1229432 "Camp Tent" npc 3605
+  collect 279978 x5 @41.88,49.44              -- Craft Camp Tents until at least five are in your bags.
+  note Use a campfire and tent during natural breaks, crafting or group waits. Sit nearby to build rested XP up to 5% of a level; it does not add another 5% if you already exceed that amount. Camping features share a one-hour cooldown. The sleeping bag is a separate later reward.
+
+step Darnassus
+  zone Darnassus
+  accept 6344                                 -- Mydrannul: Craftsmen's Terrace, just inside Darnassus.
+  turnin 935                                  -- Arch Druid Fandral Staghelm, on the upper floor of the Cenarion Enclave tree. Use the ramps inside.
+  turnin 940                                  -- Fandral also takes the Oracle Tree report; same visit.
+  note Decline Grove of the Ancients; its Darkshore delivery is outside this route.
+  accept 98046
+  turnin 5925 only Druid                      -- Mathrengyl Bearwalker, on the middle level of the Cenarion Enclave tree; climb the interior ramp.
+  accept 5921 only Druid
+  turnin 922                                  -- Rellian Greenspyre: just south of the Cenarion Enclave.
+  turnin 98046                                -- Lariia, in the Temple of the Moon
+  accept 98065
+  turnin 98065                                -- Tyrande Whisperwind, on the upper level of the Temple of the Moon; climb the side ramp from Lariia.
+  turnin 98391                                -- Sister Aquinne: west side of Darnassus, toward the portal.
+  note Before leaving, check Skinning, Leatherworking, Cooking, First Aid and your Skinning Knife. Finish any skipped training here.
+
+step Nessa: delivery and fishing supplies
+  zone Teldrassil
+  tip Take the portal to Rut'theran Village and go straight to Nessa. Finish her quest handoff and buy the fishing supplies before going to Vesprystus. Keep the lures for Stormwind.
+  turnin 6344                                 -- Nessa Shadowsong
+  accept 6341
+  buy 6529 x1 npc 10118
+  buy 6530 x3 npc 10118
+
+step Vesprystus: Nessa's delivery
+  tip Turn in The Bounty of Teldrassil, accept Flight to Auberdine, then fly to Auberdine from this same NPC.
+  turnin 6341
+  accept 6342
+
+step Flight to Auberdine
+  tip Fly to Auberdine now. Deliver Nessa's Collection to Laird at the docks when you land.
+  fly "Auberdine"
+
+step Moonglade
+  only Druid
+  zone Darkshore
+  turnin 6342                                 -- Laird's fish stall at the docks.
+  accept 6343                                 -- Take Laird's reply, then teleport to Moonglade.
+  zone Moonglade
+  teleport 18960
+  turnin 5921                                 -- Dendrite: upstairs in Nighthaven. Take the interior ramp.
+  accept 5929
+  talk 11956                                  -- Finish the conversation.
+  complete 5929 @39.1,27.5                    -- Finish the conversation.
+  turnin 5929                                 -- Return to Dendrite upstairs.
+  accept 5931
+  talk 11800                                  -- Choose Silva's free flight to Rut'theran Village.
+  fly "Rut'theran Village" npc 11800
+
+step Back to Darnassus
+  only Druid
+  zone Darnassus
+  turnin 6343                                 -- Nessa at the docks, before taking the portal to Darnassus.
+  turnin 5931                                 -- Mathrengyl Bearwalker, middle level of the Cenarion Enclave tree; use the ramp.
+  accept 6001
+  fly "Auberdine"
+
+step The Moonkin Stone
+  only Druid
+  zone Darkshore
+  use 15208 @43.5,46.0                        -- Use the Cenarion Moondust at the Moonkin Stone.
+  complete 6001                              -- Kill Lunaclaw, then speak to his spirit.
+  fly "Rut'theran Village"
+
+step Body and Heart
+  only Druid
+  zone Darnassus
+  turnin 6001                                 -- Take the portal to Darnassus. Mathrengyl is on the Cenarion Enclave tree's middle level.
+  fly "Auberdine"
+
+step Boat to Stormwind
+  zone Stormwind City
+  tip Take the Stormwind boat from the main pier. At Stormwind Harbor, disembark and walk to Gilbert Gray.
+  goto 26.2,47.28 "Gilbert Gray at Stormwind Harbor" map 1453 live r 20
+  note Keep the Shiny Bauble and Nightcrawlers for Gilbert.

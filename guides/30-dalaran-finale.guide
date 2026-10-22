@@ -1,0 +1,63 @@
+guide aurum-druid/dalaran-finale
+title 30 - City of Dalaran: Defender of Dalaran
+faction Alliance
+race NightElf
+class Druid
+levels 30-30
+zone Hillsbrad Foothills
+category Dungeons
+folder Aurum - Druid and dungeons
+version 4
+
+step Southshore at level 30
+  zone Hillsbrad Foothills
+  tip An Alarming Request is a level-30 breadcrumb. A lower-level friend should not expect Emissary Jacques to offer it. Bring the Stormwind quests from the earlier pickup chapter before travelling north.
+  level 30
+
+step Emissary Jacques
+  getfp "Southshore" npc 2432
+  accept 92432 lvl 30
+
+step Modera outside Dalaran
+  zone Silverpine Forest
+  tip Travel north-west from Southshore, past Hillsbrad Fields toward Dalaran and Lordamere Lake. Avoid Tarren Mill and enemy camps. Find Modera by the outer sewer approach. Silverpine has no Alliance flight point here; do not go to the Sepulcher's Horde flight master.
+  turnin 92432
+  accept 92457 lvl 24 group 5
+  accept 92458 lvl 24 group 5
+
+step Enter City of Dalaran
+  zone Alterac Mountains
+  tip Meet your party at the sewer entrance. Keep the key supplied with Heart of Disruption, open the gate, and follow the large pipe to the portal. Alliance city access to the sewers is beside Cantrips and Crows. Check all four dungeon quests are accepted before the first pull.
+  goto 8.5,59.2 "City of Dalaran entrance approach" live r 25
+
+step Complete the dungeon
+  tip Gather the blossom in the central garden for Shylamiir, finish Modera's remnants and Andromath's named objective, and collect the Arcane Mote at the Violet Citadel end of the run. Check all four quest entries before leaving.
+  complete 92456 group 5
+  complete 92489 group 5
+  complete 92457 group 5
+  complete 92458 group 5
+
+step Claim Defender of Dalaran
+  zone Silverpine Forest
+  tip Return to Modera. For Heart of Disruption, choose Defender of Dalaran; it is a quest reward choice, not a random boss drop.
+  turnin 92457
+  turnin 92458 choose 279841
+
+step Finish the Kirin Tor introduction
+  tip Take Modera's follow-up and speak to Archmage Celindra in the Violet Citadel. Keep the supplied Arcane Mote through this handoff.
+  accept 92459 lvl 24
+  turnin 92459
+
+step Return via Southshore
+  zone Hillsbrad Foothills
+  tip Return by the same lakeshore and Hillsbrad route to Southshore, then fly to Stormwind for the final two rewards. Do not take Horde flight paths.
+  fly "Stormwind"
+
+step Stormwind: finish the other hand-ins
+  zone Stormwind City
+  turnin 92456
+  turnin 92489
+  turnin 563 -- Finish Farrens reassignment report at Major Samuelson in Stormwind Keep after the Dalaran return.
+
+step Beta test complete
+  note Your tested route ends here. Save the Recorder session with /reload or logout, and record any wrong giver, gate, position or timing before revising the pack.

@@ -1,0 +1,82 @@
+guide aurum-druid/redridge-early
+title 17 - Redridge: bridge, gnolls and Deadmines report
+faction Alliance
+race NightElf
+class Druid
+levels 16-18
+zone Redridge Mountains
+category Leveling
+folder Aurum - Druid and dungeons
+version 6
+next aurum-druid/deadmines
+
+# Original Aurum route text; existing required Lakeshire trip expanded with
+# verified low-level outdoor objectives, replacing anonymous pre-18 grinding.
+
+step Road to Lakeshire
+  tip From Sentinel Hill, follow the roads through Elwynn and Eastvale to Three Corners. Avoid cutting through Duskwood. Collect Parker's report at the road junction, then speak to Feldon at the bridge and learn the flight path.
+  accept 244 lvl 11
+  turnin 244
+  accept 246 lvl 11
+  accept 98407 lvl 11
+  getfp "Lakeshire" npc 931
+
+step Lakeshire inn, then town pickups
+  tip Finish Wiley's report upstairs, then take Darcy's lunch downstairs. Leave the inn for the remaining town pickups.
+  turnin 65
+  accept 132
+  accept 129 lvl 12 -- Darcy downstairs gives Parker's lunch.
+  accept 118 lvl 14 -- Deliver Verner's letter before clearing the bridge-material gnolls.
+  accept 125 lvl 15
+  accept 98386 lvl 15 -- Take both quests from Foreman Oslow during this visit.
+  accept 3741 lvl 12 -- Shawn on the dock; collect Hilarys necklace during the toolbox swim.
+  vendor 956 -- Dorin Songblade at the central Lakeshire smithy; sell and repair during the existing town visit.
+
+step Goldshire: unlock the gnoll assignment
+  zone Elwynn Forest
+  tip Follow the road west to Goldshire and deliver Verner's letter to Smith Argus. Take the horseshoes back to Lakeshire before farming the northern gnolls, so their kills count for both Verner and the bridge materials.
+  turnin 118
+  accept 119 lvl 13
+
+step Lakeshire: horseshoes and the lake toolbox
+  zone Redridge Mountains
+  turnin 119
+  accept 124 lvl 15
+  tip Swim to the sunken chest east of the bridge and recover Oslow's toolbox, then return to him before collecting bridge materials. Use Aquatic Form for the swim if learned; surface for air when needed.
+  collect 1309 quest 125
+  collect 10958 quest 3741
+  turnin 3741
+  turnin 125
+  accept 89 lvl 15
+
+step Gnolls: kill credit and bridge materials
+  turnin 129 -- Parker patrols the road toward Duskwood; use his name to locate the patrol.
+  accept 130 lvl 12
+  tip Clear Mongrels, Poachers and Thrashers around Three Corners for Feldon. Then move north of Lakeshire for Brutes and Mystics: gather the bridge fittings while completing Verner's kill counts. Continue only until both the kill counters and bridge materials are complete. Pull from the edges of camps and stay out of the Blackrock cave.
+  kill 423 quest 246.1
+  kill 424 quest 246.2
+  collect 280911 quest 98407.1
+  kill 426 quest 124.1
+  kill 430 quest 124.2
+  collect 2856 npc 426 quest 89.1
+  collect 1013 npc 426 quest 89.2
+  turnin 246
+  turnin 98407
+  turnin 89
+  turnin 124
+  turnin 130
+  accept 131 lvl 12
+  turnin 131
+
+step Alther's Mill: spiders and eggs
+  tip Follow the northern lake road to Alther's Mill. The Greater Tarantulas here are level 19-20. Kill 12 Greater Tarantulas and destroy 6 Tarantula Eggs around the mill before returning to Lakeshire. Pull one spider at a time and heal between pulls. Do not enter the northern Blackrock cave or the eastern elite keep.
+  kill 505 quest 98386.1
+  # The private builder resolves this client-verified missing objective as its own live egg counter.
+  complete 98386 @48.20,38.00 live -- Destroy all 6 Tarantula Eggs at the mill before leaving.
+
+step Lakeshire: finish the preparation quests
+  tip Return west along the lake road and hand in the mill task before taking Wiley's report to Sentinel Hill. The group dungeon remains the next chapter.
+  complete 98386 @48.20,38.00 live -- Finish any remaining Tarantula Eggs at the mill before returning to Oslow.
+  turnin 98386
+  vendor 956 -- Dorin Songblade at the central Lakeshire smithy; sell and repair during the existing town visit.
+  level 18 -- Readiness check after authored outdoor XP, not a promised number of dungeon repeats.

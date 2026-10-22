@@ -1,0 +1,95 @@
+guide aurum-druid/stockades
+title 22 - Stockades: southern pickups and dungeon quests
+faction Alliance
+race NightElf
+class Druid
+levels 22-24
+zone Stormwind City
+category Dungeons
+folder Aurum - Druid and dungeons
+next aurum-druid/future-pickups
+version 4
+keywords stockades,stockade,duskwood,redridge,stormwind,bazil
+
+# Original Aurum connecting route using installed QuestieDB Forever quest data.
+# Minimum levels are pickup requirements, not the levels of the dungeon mobs.
+# Research and coordinate frames: research/stockades-quests.json.
+# 378 is intentionally not a required pickup: 303, its prerequisite, needs 25.
+
+step Stockades pickup level
+  tip The previous chapter ends in Stormwind with Crime and Punishment already accepted in Darkshire. The four independent Stockades pickups require level 22; The Stockade Riots comes from the VanCleef letter we kept. Leave room for all five dungeon quests and retain the unfinished Legend of Stalvan for the later Eastvale visit.
+  level 22
+
+step Lakeshire: What Comes Around
+  zone Redridge Mountains
+  tip Fly from Stormwind to Lakeshire using the flight path learned on the Deadmines quest circuit. Guard Berton has the Targorr quest. If you missed that unlock, follow the Elwynn road east through Three Corners and learn Lakeshire before leaving.
+  fly "Lakeshire"
+  accept 386 lvl 22 group 5
+  getfp "Lakeshire" npc 931
+
+step Fly to Stormwind
+  fly "Stormwind"
+
+step Stormwind: The Color of Blood
+  zone Stormwind City
+  tip Nikova Raskol walks in Old Town. The Unsent Letter and Bazil Thredd should already be started after Deadmines; these checks recover an unfinished hand-in. Keep that chain because it leads to the Seal of Wrynn reward. Repair and buy roughly 10-20 level-appropriate drinks within your budget before entering the prison.
+  vendor nearest
+  accept 388 lvl 22 group 5
+  accept 373 item 2874
+  turnin 373
+  accept 389
+
+step Warden Thelwater: the entrance pickups
+  tip Warden Thelwater stands outside the Stockades. Finish Bazil Thredd here, then take The Stockade Riots and Quell the Uprising. If the letter chain is missing, recover VanCleef's letter before expecting the Seal of Wrynn follow-up. The Fury Runs Deep is not available on this first trip: its Wetlands prerequisite requires 25.
+  turnin 389
+  accept 387 lvl 22 group 5
+  accept 391 lvl 16 group 5
+
+step Enter the Stockades with your party
+  tip Meet your five-person group at Warden Thelwater, then enter the prison portal near him. The bosses are higher level than these quest pickup requirements: bring a group that can finish the required bosses, and do not attempt to solo it at 22. Confirm everybody has their pickups before entering.
+  talk 1719
+
+step Clear the Stockades objectives
+  tip Loot Dextren Ward's hand, Targorr's head and Bazil Thredd's head; collect ten Red Wool Bandanas and finish the Prisoner, Convict and Insurgent kills. Keep three Silk Cloth from the prison drops for Tyrion's follow-up. Tell your group which named bosses you need before choosing a wing.
+  complete 377 group 5
+  complete 386 group 5
+  complete 387 group 5
+  complete 388 group 5
+  complete 391 group 5
+
+step Warden Thelwater: prison rewards
+  tip Leave through the entrance to return to the warden. Hand in both quests and take The Curious Visitor before leaving.
+  turnin 387
+  turnin 391
+  accept 392 lvl 16
+
+step Nikova Raskol: bandana reward
+  turnin 388
+
+step Begin the Seal of Wrynn follow-up
+  tip Keep three Silk Cloth from the prison drops. After Nikova, deliver the warden's report to Baros Alexston in Cathedral Square, then follow the city's investigation chain. We postpone its level-30/31 enemies until the level-30 city visit instead of trying that fight at 22.
+  turnin 392
+  accept 393 lvl 16
+  turnin 393
+  accept 350 lvl 16
+  turnin 350
+  accept 2745 lvl 16
+
+step Stormwind Keep: Tyrion's supplies
+  tip Meet Tyrion in the keep garden. His next quest needs two Clara's Fresh Apples and three Silk Cloth. Keep the cloth saved from Stockades; buy only a shortfall. The apple purchase is included on our later walk through Elwynn, so hold this quest until the level-30 city visit rather than making a separate orchard round trip now.
+  turnin 2745
+  accept 2746 lvl 16
+
+step Lakeshire: Targorr reward
+  zone Redridge Mountains
+  fly "Lakeshire"
+  turnin 386
+
+step Darkshire: Dextren Ward reward
+  zone Duskwood
+  fly "Darkshire"
+  turnin 377
+
+step Ready for the level-24 dungeon pickups
+  tip The next chapter has pickups that require 24; one Stockades clear is not assumed to supply two levels. First turn in the rewards above and finish any nearby objectives already in your log. If still below 24, use ordinary wolves and spiders around the Darkshire roads at or below your level for the remaining XP, skinning as you go. Stay out of the higher-level worgen camps and avoid named elites. Stop at 24, keep your unfinished Duskwood chains for the coming chapters, and continue with the planned flight. This local contingency does not require accepting extra quests or repeating a dungeon; actual party XP may shorten or remove it.
+  level 24

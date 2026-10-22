@@ -1,0 +1,76 @@
+guide aurum-druid/ruins-of-lordaeron
+title 16 - Ruins of Lordaeron: Grave Shroud
+faction Alliance
+race NightElf
+class Druid
+levels 16-20
+zone Darkshore
+category Dungeons
+folder Aurum - Druid and dungeons
+version 7
+next aurum-druid/westfall-deadmines
+
+step Auberdine: board the northern boat loop
+  tip Take the Menethil/Southshore boat from the southern branch of Auberdine's long pier. Stay aboard at Menethil; disembark at Southshore. Leave four quest-log slots for the Ruins.
+  level 16
+  goto 32.34,44.13 "Auberdine: Menethil and Southshore boat" era r 30
+
+step Southshore arrival
+  zone Hillsbrad Foothills
+  tip Leave the ship at Southshore, walk into town, and learn Darla Harris's flight path before heading north. Repair and buy roughly 10-20 drinks usable at your level, within your budget. Keep your hearthstone bound at Sentinel Hill for the return.
+  goto 50.67,70.44 "Southshore: leave the boat" era r 35
+  getfp "Southshore" npc 2432
+  vendor nearest
+
+step Through Alterac to the lake east of Dalaran
+  zone Alterac Mountains
+  tip From Southshore, cut through Alterac toward the east side of Dalaran. Enter Lordamere Lake at 21.5,49 and switch to Aquatic Form.
+  goto 21.5,49 "Lordamere Lake: eastern entry" live r 30
+
+step Swim to the shore east of Undercity
+  zone Tirisfal Glades
+  tip Swim north through the lake in Aquatic Form. Come ashore around Tirisfal 67,79, east of Undercity, then climb the cliffside toward the surface ruins.
+  goto 67,79 "Eastern lakeshore: climb toward the Ruins" live r 35
+
+step Enter with your group
+  zone Tirisfal Glades
+  tip From the eastern lakeshore, walk up the cliffside to the surface ruins. In the outer courtyard, look left for the stairs and portcullis to the dungeon portal.
+  goto 63.2,67.5 "Ruins of Lordaeron entrance" live r 25
+
+step Take the Grave Shroud quest inside
+  tip Immediately after zoning in, turn left and speak to Captain Truman. Take his quest before the Baron pull. The interior position is described by the doorway and NPC, rather than a fabricated outdoor coordinate.
+  accept 95250 npc 265701 lvl 16 group 5
+
+step The Baron
+  tip Kill the Baron and loot his head. Loot undead enemies for Bloodied Insignias and use the first one to start its quest, then collect ten. Search towers and side rooms near Bjork and the Baron for the Crest. In the graveyard near Rath'mael, inspect the Blood-Stained Letter beside Edward Heartweaver's body. Each player needs their own quest items; check before the group leaves those areas.
+  complete 95250 group 5
+  accept 95195 item 268535 lvl 16
+  accept 95189 item 268579 lvl 16
+  accept 92415 item 251270 lvl 15
+  complete 95195 group 5
+
+step Claim Grave Shroud
+  tip Return to Captain Truman inside the instance and choose Grave Shroud. Do not leave before taking the reward.
+  turnin 95250 npc 265701 choose 279865
+
+step Hearth south after all inside objectives
+  zone Westfall
+  tip Finish Truman's reward, then hearth to Sentinel Hill and fly to Stormwind. If your hearthstone is cooling down, wait somewhere safe. Keep all three quest-starting items for their hand-ins.
+  hearth "Sentinel Hill"
+  fly "Stormwind"
+
+step Stormwind: entry and orphanage rewards
+  zone Stormwind City
+  tip Hand Bloodied Insignia to General Marcus Jonathan by the city entrance, then take the letter to Orphan Matron Nightingale at the Cathedral Square orphanage. Carry her follow-up to Darkshire later without making a separate trip now.
+  turnin 95195
+  turnin 92415
+  accept 95161 npc 14450 lvl 15 -- Carry the letter to Avette in Darkshire on the later Duskwood visit.
+
+step Stormwind Keep: Crest of Lordaeron
+  tip Lady Dena Kennedy is in the Royal Gallery of Stormwind Keep. Enter the keep and follow its interior halls to the gallery; the reported map pin is an arrival aid, so look for her by name in the room.
+  turnin 95189 npc 15991 @70.2,29.8 map 1453 live
+
+step Fly back to Westfall
+  tip Fly to Sentinel Hill to resume the Moonbrook chapter. Keep the Duskwood letter for its later stop; this return does not require another trip to Tirisfal.
+  fly "Sentinel Hill"
+

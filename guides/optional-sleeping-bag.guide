@@ -1,0 +1,69 @@
+guide aurum-druid/sleeping-bag
+title Aurum: early sleeping bag detour
+faction Alliance
+race NightElf
+class Druid
+levels 14-30
+zone Westfall
+category Exploration
+folder Aurum - Optional detours
+version 1
+keywords sleeping bag,pvp,cozy,early
+reward item 211527
+why Optional level-14 travel for the sleeping bag; separate from the fastest main leveling route.
+
+step Choose the optional expedition
+  tip The quest chain opens at 14. This is an early-unlock choice for a PvP server, not a claim that the long travel is the fastest way to level 30. Bring a partner if possible, repaired gear, drinks and camping supplies. Keep your Hearthstone at Sentinel Hill for the return from Kalimdor. Retain your main Aurum chapter in another Polestar tab so you can resume it afterward.
+  level 14
+
+step Westfall: the first note
+  tip Search the Burned-Out Remains at Alexston Farm. Take the Alliance version of the note quest. This quest sends you to southern Barrens; the other starting version is for the reverse direction.
+  accept 79008 object 415107 lvl 14
+
+step Druid shortcut to the northern coast
+  zone Moonglade
+  tip Cast Teleport: Moonglade, then speak to Silva Fil'naveth for the free Druid flight. In Rut'theran, take the known flight connection to Auberdine. This avoids walking back across the Eastern Kingdoms to find a sea crossing.
+  teleport 18960
+  talk 11800
+  fly "Rut'theran Village" npc 11800
+  fly "Auberdine"
+
+step Southern Barrens: the matching remains
+  zone The Barrens
+  tip Travel south through Darkshore and Ashenvale into the Barrens. Avoid Horde settlements and guards; the required camp is in the south. The arrow marks the quest object, not a guarantee of safe travel at level 14. Inspect the matching remains, then take Stepping Stones from the Nailed Plank beside them.
+  turnin 79008 object 415106
+  accept 79192 object 417072 lvl 14
+
+step Stonetalon: Pocket Litter
+  zone Stonetalon Mountains
+  tip Return north through the Barrens and take the road into Stonetalon. Find Pocket Litter at the marked camp. Follow the quest interaction rather than unrelated camping features nearby.
+  turnin 79192 object 424005
+  accept 79980 object 424005 lvl 14
+
+step Stonetalon: the Mound of Dirt
+  tip Search the nearby marked Mound of Dirt to finish Scramble and take Wet Job.
+  turnin 79980 object 424012
+  accept 79974 object 424012 lvl 14
+
+step Hearth back to Sentinel Hill
+  zone Westfall
+  tip With Wet Job taken, use your Sentinel Hill Hearthstone. This removes the long return across Kalimdor. If your bind is elsewhere or it is still on cooldown, choose an available return route; do not change your bind to a different inn for this instruction.
+  hearth "Sentinel Hill"
+  fly "Stormwind"
+
+step Loch Modan: the Carved Figurine
+  zone Loch Modan
+  tip From Stormwind take the Deeprun Tram to Ironforge, then follow Dun Morogh's eastern road into Loch Modan. Continue north to Stonewrought Dam and inspect the Carved Figurine. Do not jump off the dam. The normal route is used for the approach; any final structure/ledge access still needs a client check.
+  turnin 79974 object 424007
+  accept 79975 object 424007 lvl 14
+
+step Arathi: Messenger Bag at Thoradin's Wall
+  zone Arathi Highlands
+  tip Continue via Dun Algaz into the Wetlands, north across Thandol Span into Arathi, then toward Thoradin's Wall in the northwest. These are dangerous, contested areas for a level-14 character. The destination is the Messenger Bag at the wall, not the bridge at Thandol Span. Inspect the wall's access route carefully rather than jumping blindly.
+  turnin 79975 object 406918
+  accept 79976 object 406918 lvl 14
+
+step Claim the sleeping bag
+  tip Finish at the Hastily Rolled-Up Satchel near the Messenger Bag, then verify Cozy Sleeping Bag is in your bags. Use the item during natural waits. Its effect is separate from a Leatherworking tent's rested-XP top-up. Switch back to the Aurum leveling chapter you left; this optional guide does not replace that route or assume you completed unrelated quests.
+  turnin 79976 object 424006
+  collect 211527 x1 @22.45,24.21

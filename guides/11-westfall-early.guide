@@ -1,0 +1,116 @@
+guide aurum-druid/westfall-early
+title 10 - Stormwind and Elwynn before the Hall
+faction Alliance
+race NightElf
+class Druid
+levels 10-13
+zone Elwynn Forest
+category Leveling
+folder Aurum - Druid and dungeons
+version 15
+next aurum-druid/hall-of-thanes
+
+# Adapted from Fitz / fitzforge Polestar, GPL-3.0-only.
+# Source: guides/forever/alliance/02-westfall.guide at 1775eb81e56fc1e127ae869ccec0b7dc8d7092fd.
+# Aurum adaptation: Night Elf Druid, southern questing, dungeon interleaving.
+
+step Fishin' Time on arrival
+  zone Stormwind City
+  tip Visit Gilbert Gray while still at the harbor, before going to the flight master. Use the Shiny Bauble and three Nightcrawlers bought from Nessa in Rut'theran. If either is missing, the shopping goals point to Catherine Leland beside the Trade District canal; buy the missing supplies before returning to Gilbert. No fishing skill is required.
+  buy 6529 x1 npc 5494 quest 95065
+  buy 6530 x3 npc 5494 quest 95065
+  accept 95065
+  turnin 95065
+
+step Arrive in Stormwind
+  tip Climb the harbor stairs and visit Dungar Longdrink in the Trade District gryphon roost. Use the ramp inside to reach him.
+  getfp "Stormwind" npc 352
+  train class
+
+step Westfall pickup eligibility
+  tip Finish your Bear Form training before continuing.
+  level 10
+
+step Goldshire supplies and Westfall report
+  zone Elwynn Forest
+  sethome "Goldshire" npc 295 -- Set your Hearthstone at Innkeeper Farley before heading east.
+  vendor 295 -- Sell low-value loot at the inn. Keep skinning leather, cloth for First Aid, and route quest items.
+  note Refill to 10-20 Ice Cold Milk, or as many as you can afford after reserving spell-training and flight money. Food is useful between pulls; carry a small stack. The purchase below is a reminder, not a demand to replace supplies you already own.
+  buy 1179 x20 npc 295 optional
+  accept 109 npc 240 lvl 9 -- Carry Marshal Dughan's report west to Sentinel Hill.
+
+step Goldshire: the eastern outdoor circuit
+  zone Elwynn Forest
+  tip Take Marshal Dughan's report to Guard Thomas at the eastern bridge.
+  accept 40 lvl 7
+  turnin 40
+  accept 35 lvl 7
+
+step Guard Thomas and the river tools
+  tip Follow the eastern road to the bridge. Speak to Thomas and Ormin, then gather the waterlogged saw, axe and toolbox in that order in the river just downstream. Return the tools before heading north to Eastvale.
+  turnin 35
+  accept 37 lvl 7
+  accept 52 lvl 7
+  accept 91733 lvl 7
+  collect 247813 quest 91733.2
+  collect 247817 quest 91733.1
+  collect 247818 quest 91733.3
+  turnin 91733
+
+step Eastvale Logging Camp
+  tip Take Sara's bandana task and Raelen's timber request. Gather the loose wood around the logging camp while skinning the wolves and bears needed for Thomas; no profession gathering skill is required for the wood.
+  accept 83 lvl 4
+  accept 5545 lvl 5
+  collect 13872 quest 5545.1
+  kill 118 quest 52.1
+  kill 822 quest 52.2
+  turnin 5545
+
+step The lost guards and lake bandits
+  tip Inspect the half-eaten body by the river, then Rolf's body in the murloc camp by Stone Cairn Lake. Clear the immediate guards instead of rushing between packs. Gather bandanas from the nearby Defias while travelling between the two bodies.
+  turnin 37
+  accept 45 lvl 7
+  turnin 45
+  accept 71 lvl 7
+  collect 1019 npc 474 quest 83.1
+
+step Eastvale and the bridge: finish every local task
+  tip Return Sara's bandanas, then finish both reports at Guard Thomas. Take his final report back to Goldshire.
+  turnin 83
+  turnin 52
+  turnin 71
+  accept 39 lvl 7
+
+step Goldshire: the finished report
+  turnin 39
+  vendor 295 -- Sell junk and refill drinks.
+
+step Goldshire: the armor delivery
+  tip Marshal Dughan now offers Cloth and Leather Armor for Sara Timberlain. Carry it on the extra eastern circuit; this is a delivery, not a crafting requirement.
+  accept 59
+
+step Blixie Fitzwink: stolen supplies
+  tip Stop at Blixie on the eastern road and accept Stolen Enchanting Supplies. The crates are outdoors around Stone Cairn Lake; no profession is required.
+  accept 91725
+
+step Guard Thomas: the murloc bounty
+  tip After delivering his report to Goldshire, Thomas offers Bounty on Murlocs. Take it before returning to the lake.
+  accept 46
+
+step Eastvale: deliver the armor request
+  turnin 59
+
+step Stone Cairn Lake: supplies and fins
+  tip Collect five supply crates around the lake and fins from Murloc Lurkers, levels 9-10. Pull from the camp edge and avoid named enemies.
+  collect 247805 quest 91725.1
+  collect 780 npc 732 quest 46.1
+
+step Guard Thomas and Blixie: claim the rewards
+  tip Return the fins to Thomas, then follow the road west to Blixie with the supply crates.
+  turnin 46
+  turnin 91725
+
+step Prepare for the Hall of Thanes
+  tip Return to Goldshire. Sell junk and refill drinks at the inn.
+  vendor 295
+
